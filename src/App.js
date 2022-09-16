@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import AboutMe from './Sections/AboutMe';
 import Home from './Sections/Home';
 import Education from './Sections/Education';
+import LanguagesAndTools from './Sections/LanguagesAndTools';
 
 const style = {
   backgorundColor: '#F2E7C6'
@@ -14,7 +15,7 @@ function App() {
       <div style={{color:"#7C898B"}}>
         <Navbar />
       </div>
-      
+
       <div>
         <Home />
       </div>
@@ -25,6 +26,10 @@ function App() {
 
       <div id='edu'>
         <Education />
+      </div>
+
+      <div id='languages'>
+        <LanguagesAndTools />
       </div>
     </div>
 
