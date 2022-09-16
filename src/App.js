@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import AboutMe from './Sections/AboutMe';
+import Home from './Sections/Home';
+import Education from './Sections/Education';
+
+const style = {
+  backgorundColor: '#F2E7C6'
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='home' style={style}>
+      <div style={{color:"#7C898B"}}>
+        <Navbar />
+      </div>
+      
+      <div>
+        <Home />
+      </div>
+
+      <div id='aboutMe'>
+        <AboutMe />
+      </div>
+
+      <div id='edu'>
+        <Education />
+      </div>
     </div>
+
   );
 }
 
