@@ -7,11 +7,11 @@ const style = {
     fontSize: 20,
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'left',
-    justifyContent: 'left',
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: 20,
     margin: 20,
-    textAlign: 'left',
+    textAlign: 'center',
     paddingTop: 30
 };
 
@@ -89,11 +89,6 @@ const LanguagesAndTools = () => {
                 <OverlayTrigger placement="right" delay={{show: 250, hide: 400}} overlay={<Tooltip id="linux">Linux</Tooltip>}>
                 <a href="https://www.linux.org/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" style={styleIcon} /></a>
                 </OverlayTrigger>
-
-                <OverlayTrigger placement="right" delay={{show: 250, hide: 400}} overlay={<Tooltip id="jetBrains">JetBrains</Tooltip>}>
-                <a href="https://www.jetbrains.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg" alt="JetBrains" style={styleIcon} /></a>
-                </OverlayTrigger>
-
             </p>
         </div>
     );

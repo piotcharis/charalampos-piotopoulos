@@ -5,11 +5,11 @@ const style = {
     fontSize: 20,
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'left',
-    justifyContent: 'left',
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: 20,
     margin: 20,
-    textAlign: 'left',
+    textAlign: 'center',
     paddingTop: 30
 };
 
