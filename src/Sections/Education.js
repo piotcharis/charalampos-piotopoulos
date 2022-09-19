@@ -34,7 +34,7 @@ function Education (props) {
 
     return (
         <div style={style}>
-            <h1 style={{paddingBottom: 30, color: '#7C898B'}}>Education</h1>
+            <h1 style={{paddingBottom: 30, color: '#D36135'}}>Education</h1>
             <div style={{display:'flex', width: "100%", height: "550px"}}>
             <Chrono 
             items={items}

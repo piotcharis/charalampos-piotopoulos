@@ -35,7 +35,7 @@ function getAge() {
 const AboutMe = () => {
     return (
         <div style={style}>
-            <h1 style={{paddingBottom: 30, color: '#7C898B'}}>About me</h1>
+            <h1 style={{paddingBottom: 30, color: '#D36135'}}>About me</h1>
 
             <p style={styleP}>
                 <p>My name is Charalampos Piotopoulos, I am {getAge()} years old from Greece and I study Computer Science at the Technical University of Munich (TUM). </p>

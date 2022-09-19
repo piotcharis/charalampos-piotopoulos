@@ -24,7 +24,7 @@ const styleIcon = {
 const LanguagesAndTools = () => {
     return (
         <div style={style}>
-            <h1 style={{paddingBottom: 30, color: '#7C898B'}}>Languages and Tools</h1>
+            <h1 style={{paddingBottom: 30, color: '#D36135'}}>Languages and Tools</h1>
             <p>
                 <OverlayTrigger placement="right" delay={{show: 250, hide: 400}} overlay={<Tooltip id="java">Java</Tooltip>}>
                     <a href="https://www.java.com/en/"><img src="https://user-images.githubusercontent.com/79626497/189351129-c95e19fc-68c8-480c-8b9b-76091299ed45.png" alt="Java" style={styleIcon} /></a>

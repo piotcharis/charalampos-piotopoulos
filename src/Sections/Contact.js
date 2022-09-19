@@ -27,7 +27,7 @@ const styleInput = {
 const Contact = () => {
     return (
         <div style={style}>
-            <h1 style={{paddingBottom: 30, color: '#7C898B'}}>Contact</h1>
+            <h1 style={{paddingBottom: 30, color: '#D36135'}}>Contact</h1>
             
             <form action="https://formsubmit.co/7744f71387ce0f2733e363b38c376bf2" method="POST">
                 <input type="text" name="firstName" required placeholder="First name" style={styleInput} />
