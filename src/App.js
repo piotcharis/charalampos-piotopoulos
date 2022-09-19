@@ -4,6 +4,7 @@ import AboutMe from './Sections/AboutMe';
 import Home from './Sections/Home';
 import Education from './Sections/Education';
 import LanguagesAndTools from './Sections/LanguagesAndTools';
+import Contact from './Sections/Contact';
 
 const style = {
   backgorundColor: '#F2E7C6'
@@ -30,6 +31,10 @@ function App() {
 
       <div id='languages'>
         <LanguagesAndTools />
+      </div>
+
+      <div id='contact'>
+        <Contact />
       </div>
     </div>
 
