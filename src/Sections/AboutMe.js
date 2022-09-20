@@ -46,7 +46,7 @@ const AboutMe = () => {
                     <h1 className="title">About me</h1>
 
                     <p style={styleP}>
-                        <p>My name is Charalampos Piotopoulos, I am {getAge()} years old from Greece and I study Computer Science at the Technical University of Munich (TUM). </p>
+                        <p>My name is Charalampos Piotopoulos, I am {getAge()} years old, from Greece and I study Computer Science at the Technical University of Munich (TUM). </p>
                         <p>I am always trying to evolve and learn new things by working hard and seeking new challenges. 
                         I am passionate about Programming, Technology, Science, Medicine and Space. 
                         I am currently exploring all the different paths and interdisciplinary opportunities this science has to offer by studying, reasearching and building projects of my own.</p>

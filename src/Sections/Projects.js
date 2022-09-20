@@ -12,7 +12,7 @@ const style = {
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
-    margin: 20,
+    margin: 180,
     textAlign: 'center',
     paddingTop: 30,
 };
@@ -20,15 +20,21 @@ const style = {
 function Projects () {
 
     const styleCard = {
-        width:'20rem',
-        height:'20rem'
+        width:'auto',
+        height:'auto'
+    };
+
+    const styleCardText = {
+        fontSize:15, 
+        height:'auto',
+        minHeight: 40
     };
 
     return (
         <div style={style}>
             <h1 className="title">Projects</h1>
 
-            <div style={{padding:50}}>
+            <div style={{margin:'auto', textAlign:'center'}}>
                 <Row xs={1} md={3} className="g-4">
                     <Col>
                         <Card bg='Dark' text='dark' style={styleCard}>
@@ -36,9 +42,9 @@ function Projects () {
                             <Card.Body>
                                 <Card.Title>This website</Card.Title>
                                 <Card.Text>
-                                    <p style={{fontSize:15, height:40}}>This website was created using React.js and Bootstrap.</p>
+                                    <p style={styleCardText}>This website was created using React.js and Bootstrap.</p>
                                     <a href="https://github.com/piotcharis/personal_site">
-                                        <button style={{border:'transparent', background:'transparent', width:50, paddingRight:10}}>
+                                        <button style={{border:'transparent', background:'transparent', width:50}}>
                                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
                                         </button>
                                     </a>
@@ -52,9 +58,9 @@ function Projects () {
                             <Card.Body>
                                 <Card.Title>Pingu Search Engine</Card.Title>
                                 <Card.Text>
-                                    <p style={{fontSize:15, height:40}}>This app was created using Java.</p>
+                                    <p style={styleCardText}>This app was created using Java.</p>
                                     <a href="https://github.com/piotcharis/SearchEnginePGdP">
-                                        <button style={{border:'transparent', background:'transparent', width:50, paddingRight:10}}>
+                                        <button style={{border:'transparent', background:'transparent', width:50}}>
                                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
                                         </button>
                                     </a>
@@ -68,8 +74,24 @@ function Projects () {
                             <Card.Body>
                                 <Card.Title>Mandelbrot set</Card.Title>
                                 <Card.Text>
-                                    <p style={{fontSize:15, height:40}}>This program was created using C. (repo coming soon...)</p>
+                                    <p style={styleCardText}>This program was created using C. (repo coming soon...)</p>
                                     <a href="https://github.com/piotcharis/Mandelbrot">
+                                        <button style={{border:'transparent', background:'transparent', width:50}}>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+                                        </button>
+                                    </a>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card bg='Dark' text='dark' style={styleCard}>
+                            <Card.Img variant="top" src={require("./resources/top-of-the-hats.png")} />
+                            <Card.Body>
+                                <Card.Title>Top of the Hats</Card.Title>
+                                <Card.Text>
+                                    <p style={styleCardText}>This program was created using Java and Java Swing.</p>
+                                    <a href="https://github.com/piotcharis/TopOfTheHats">
                                         <button style={{border:'transparent', background:'transparent', width:50, paddingRight:10}}>
                                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
                                         </button>
