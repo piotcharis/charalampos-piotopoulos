@@ -1,5 +1,6 @@
 import React from "react"
 import { Chrono } from "react-chrono";
+import "../App.css"
 
 function Education (props) {
     const style = {
@@ -34,14 +35,14 @@ function Education (props) {
 
     return (
         <div style={style}>
-            <h1 style={{paddingBottom: 30, color: '#D36135'}}>Education</h1>
-            <div style={{display:'flex', width: "100%", height: "550px"}}>
+            <h1 className="title">Education</h1>
+            <div style={{display:'flex', width: "110%", height: "550px"}}>
             <Chrono 
             items={items}
             theme={{
                 primary: props.isDark ? '#FFFFFF' : '#232C33',
                 secondary: '#D36135',
-                cardBgColor: 'white',
+                cardBgColor: props.isDark ? '#B5BBBB' : '#FFFFFF' ,
                 cardForeColor: '#232C33',
                 titleColor: '#7C898B',
                 titleColorActive: '#232C33'

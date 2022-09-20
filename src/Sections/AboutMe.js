@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css"
 
 const style = {
     fontFamily: 'Roboto Mono',
@@ -19,10 +20,10 @@ const styleP = {
 };
 
 function getAge() {
-    var today = new Date();
-    var birthDate = new Date("2000-05-15");
-    var age = today.getFullYear() - 2000;
-    var m = today.getMonth() - 5;
+    let today = new Date();
+    let birthDate = new Date("2000-05-15");
+    let age = today.getFullYear() - 2000;
+    let m = today.getMonth() - 5;
     
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
     {
@@ -35,7 +36,7 @@ function getAge() {
 const AboutMe = () => {
     return (
         <div style={style}>
-            <h1 style={{paddingBottom: 30, color: '#D36135'}}>About me</h1>
+            <h1 className="title">About me</h1>
 
             <p style={styleP}>
                 <p>My name is Charalampos Piotopoulos, I am {getAge()} years old from Greece and I study Computer Science at the Technical University of Munich (TUM). </p>

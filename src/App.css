@@ -40,3 +40,9 @@
 .white-content {
   background: #e4e4e4;
 }
+
+.title {
+  padding-bottom: 30;
+  margin-bottom: 30;
+  color:#a5adae;
+}

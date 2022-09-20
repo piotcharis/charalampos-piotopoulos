@@ -7,13 +7,14 @@ import Education from './Sections/Education';
 import LanguagesAndTools from './Sections/LanguagesAndTools';
 import Contact from './Sections/Contact';
 import TopButton from './Sections/ToTopButton';
+import Projects from './Sections/Projects';
 
 function App() {
 
   const [isDark, setIsDark] = React.useState(false);
 
   const style = {
-    backgroundColor: isDark ? '#232C33' : '#F5F5F5',
+    backgroundColor: isDark ? '#232C33' : '#FFFFFF',
     color: isDark ? '#F5F5F5' : '#232C33',
   };
 
@@ -23,8 +24,8 @@ function App() {
         <Navbar isDark={isDark} onChange={()=>setIsDark(current => !current)} />
       </div>
       
-      <div>
-        <Home />
+      <div style={{height:'100vh'}}>
+        <Home isDark={isDark} />
       </div>
 
       <div>
@@ -37,6 +38,10 @@ function App() {
 
       <div id='edu'>
         <Education isDark={isDark}/>
+      </div>
+
+      <div id='projects'>
+        <Projects />
       </div>
 
       <div id='languages'>

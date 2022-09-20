@@ -13,7 +13,7 @@ const styleImage = {
 const styleNavbar = {
   fontWeight: 'bold',
   fontSize: 20,
-  maxHeight: '100px'
+  maxHeight: '100px',
 };
 
 function NavBar(props) {
