@@ -3,7 +3,7 @@ import "../App.css"
 
 const styleText = {
     fontFamily: 'Roboto Mono',
-    fontSize: 20,
+    fontSize: 'auto',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -11,8 +11,7 @@ const styleText = {
     paddingDown: 20,
     margin: 20,
     textAlign: 'center',
-    paddingTop: 30,
-    height:'100vh'
+    height:'85vh'
 };
 
 const Home = (props) => {

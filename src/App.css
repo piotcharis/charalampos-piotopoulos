@@ -43,5 +43,17 @@
 
 .title {
   padding-bottom: 30px;
+  padding-top: 80px;
   color:#a5adae;
+}
+
+.mainStyle {
+    font-family: Roboto Mono;
+    font-size: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20;
+    text-align: center;
 }

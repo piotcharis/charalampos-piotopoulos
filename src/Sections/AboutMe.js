@@ -5,19 +5,19 @@ import Row from 'react-bootstrap/Row';
 
 const style = {
     fontFamily: 'Roboto Mono',
-    fontSize: 20,
+    fontSize: 'auto',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
-    margin: 40,
+    margin: 25,
     textAlign: 'center',
     paddingTop: 30
 };
 
 const styleP = {
-    textAlign: 'center',
+    textAlign: 'left',
     alignItems: "right"
 };
 

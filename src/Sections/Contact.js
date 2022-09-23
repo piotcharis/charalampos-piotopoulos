@@ -1,19 +1,6 @@
 import React from "react";
 import "../App.css"
 
-const style = {
-    fontFamily: 'Roboto Mono',
-    fontSize: 20,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-    margin: 20,
-    textAlign: 'center',
-    paddingTop: 30
-};
-
 const styleInput = {
     fontFamily: 'Roboto Mono',
     width: '80%',
@@ -27,7 +14,7 @@ const styleInput = {
 
 const Contact = () => {
     return (
-        <div style={style}>
+        <div className="mainStyle">
             <h1 className="title">Contact</h1>
             
             <form action="https://formsubmit.co/7744f71387ce0f2733e363b38c376bf2" method="POST">

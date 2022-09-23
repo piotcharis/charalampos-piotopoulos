@@ -3,19 +3,6 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import "../App.css"
 
-const style = {
-    fontFamily: 'Roboto Mono',
-    fontSize: 20,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-    margin: 20,
-    textAlign: 'center',
-    paddingTop: 30
-};
-
 const styleIcon = {
     width: 60,
     height: 65,
@@ -24,7 +11,7 @@ const styleIcon = {
 
 const LanguagesAndTools = () => {
     return (
-        <div style={style}>
+        <div className="mainStyle">
             <h1 className="title">Languages and Tools</h1>
             <p>
                 <OverlayTrigger placement="right" delay={{show: 250, hide: 400}} overlay={<Tooltip id="java">Java</Tooltip>}>

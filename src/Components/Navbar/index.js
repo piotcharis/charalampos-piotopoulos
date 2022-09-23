@@ -12,7 +12,7 @@ const styleImage = {
 
 const styleNavbar = {
   fontWeight: 'bold',
-  fontSize: 20,
+  fontSize: 'auto',
   maxHeight: '100px',
 };
 

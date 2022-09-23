@@ -1,23 +1,47 @@
 import React from "react";
 import "../App.css"
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import ReactCardCarousel from "react-card-carousel";
+
+
 
 const style = {
     fontFamily: 'Roboto Mono',
-    fontSize: 20,
+    fontSize: 'auto',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
-    margin: 180,
     textAlign: 'center',
-    paddingTop: 30,
 };
 
 function Projects () {
+    function getWidth() {
+        let temp = window.innerWidth > 1000 ? "70vw" : "100vw";
+        if (window.screen.orientation.type === "landscape-primary") {
+            temp = "65vw";
+        }
+        return temp;
+    };
+
+    const CONTAINER_STYLE = {
+          position: "relative",
+          height: "60vh",
+          width: getWidth(),
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center"
+    };
+
+    const CARD_STYLE = {
+          height: "auto",
+          width: "auto",
+          paddingTop: "0px",
+          textAlign: "center",
+          color: "#FFF",
+          borderRadius: "0px",
+          boxSizing: "border-box"
+    };
 
     const styleCard = {
         width:'auto',
@@ -25,18 +49,24 @@ function Projects () {
     };
 
     const styleCardText = {
-        fontSize:15, 
-        height:'auto',
-        minHeight: 40
+        fontSize: window.innerWidth > 1000 ? 15 : 12, 
+        height:'auto'
+    };
+
+    function getAlignment() {
+        let temp = window.innerWidth < 1000 ? "vertical" : "horizontal";
+        if (window.screen.orientation.type === "landscape-primary") {
+            temp = "horizontal";
+        }
+        return temp;
     };
 
     return (
         <div style={style}>
             <h1 className="title">Projects</h1>
-
-            <div style={{margin:'auto', textAlign:'center'}}>
-                <Row xs={1} md={3} className="g-4">
-                    <Col>
+            <div style={CONTAINER_STYLE}>
+                <ReactCardCarousel autoplay={false} alignment={getAlignment()}>
+                    <div style={CARD_STYLE}>
                         <Card bg='Dark' text='dark' style={styleCard}>
                             <Card.Img variant="top" src={require("./resources/website-dark.png")} />
                             <Card.Body>
@@ -51,8 +81,8 @@ function Projects () {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                    </Col>
-                    <Col>
+                    </div>
+                    <div style={CARD_STYLE}>
                         <Card bg='Dark' text='dark' style={styleCard}>
                             <Card.Img variant="top" src={require("./resources/search-engine.png")} />
                             <Card.Body>
@@ -67,8 +97,8 @@ function Projects () {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                    </Col>
-                    <Col>
+                    </div>
+                    <div style={CARD_STYLE}>
                         <Card bg='Dark' text='dark' style={styleCard}>
                             <Card.Img variant="top" src={require("./resources/mandelbrot.png")} />
                             <Card.Body>
@@ -83,8 +113,8 @@ function Projects () {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                    </Col>
-                    <Col>
+                    </div>
+                    <div style={CARD_STYLE}>
                         <Card bg='Dark' text='dark' style={styleCard}>
                             <Card.Img variant="top" src={require("./resources/top-of-the-hats.png")} />
                             <Card.Body>
@@ -99,8 +129,8 @@ function Projects () {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                    </Col>
-                </Row>
+                    </div>
+                </ReactCardCarousel>
             </div>
         </div>
     );
