@@ -17,8 +17,10 @@ const style = {
 
 function Projects () {
     function getWidth() {
+        var mql = window.matchMedia("(orientation: portrait)");
+
         let temp = window.innerWidth > 1000 ? "70vw" : "100vw";
-        if (window.screen.orientation.type === "landscape-primary") {
+        if (!mql.matches) {
             temp = "65vw";
         }
         return temp;
