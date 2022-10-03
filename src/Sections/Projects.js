@@ -16,20 +16,10 @@ const style = {
 };
 
 function Projects () {
-    function getWidth() {
-        var mql = window.matchMedia("(orientation: portrait)");
-
-        let temp = window.innerWidth > 1000 ? "70vw" : "100vw";
-        if (!mql.matches) {
-            temp = "65vw";
-        }
-        return temp;
-    };
-
     const CONTAINER_STYLE = {
           position: "relative",
           height: "60vh",
-          width: getWidth(),
+          width: window.innerWidth > 1000 ? "70vw" : "100vw",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center"
