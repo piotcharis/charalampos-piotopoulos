@@ -22,7 +22,7 @@ const Contact = () => {
                 <input type="text" name="lastName" required placeholder="Last name" style={styleInput} />
                 <input type="email" name="email" required placeholder="Email Address" style={styleInput} />
                 <input type="text" name="subject" required placeholder="Subject" style={styleInput} />
-                <input type="hidden" name="_next" value="http://127.0.0.1:5500/my-app/src/Sections/resources/thanks.html" />
+                <input type="hidden" name="_next" value="http://charalampos-piotopoulos.com/thanks.html" />
                 <textarea type="text" name="message" required placeholder="Your message" style={{
                         fontFamily: 'Roboto Mono',
                         width: '80%',
