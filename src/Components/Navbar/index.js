@@ -33,7 +33,7 @@ function NavBar(props) {
             style={styleNavbar}
             navbarScroll
           >
-            <Nav.Link href="#aboutMe" style={styleText}>About Me</Nav.Link>
+            <Nav.Link href="#aboutMe" style={styleText}>About You</Nav.Link>
             <Nav.Link href="#edu" style={styleText}>Education</Nav.Link>
             <Nav.Link href="#projects" style={styleText}>Projects</Nav.Link>
             <Nav.Link href="#languages" style={styleText}>Languages and Tools</Nav.Link>
