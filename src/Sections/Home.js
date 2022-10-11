@@ -17,11 +17,11 @@ const styleText = {
 const Home = (props) => {
     return (
         <div style={styleText}>
-            <h1 className="title" style={{color:'#D36135'}}>Charalampoooooos Piotopoulos</h1>
+            <h1 className="title" style={{color:'#D36135'}}>Charalampos Piotopoulos</h1>
             <p style={{fontSize:13}}>Computer Science Student - Software Engineer - Programmer</p>
             
             <p style={{padding:10}}>
-                Welcome! This is my personal website. Here you can find information about me and my projects.
+                Test! This is my personal website. Here you can find information about me and my projects.
             </p>
             <div style={{flexDirection:'row', width:'100%', height:60}}>
                 <a href="https://www.linkedin.com/in/charis-piotopoulos/">
