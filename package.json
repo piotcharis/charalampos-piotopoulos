@@ -1,8 +1,7 @@
 {
-  "name": "my-app",
+  "name": "charalampos-piotopoulos",
   "version": "0.1.0",
   "homepage": "https://charalampos-piotopoulos.com",
-  "private": true,
   "dependencies": {
     "bootstrap": "^5.2.1",
     "gh-pages": "^4.0.0",
