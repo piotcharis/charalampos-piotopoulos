@@ -21,7 +21,7 @@ const Home = (props) => {
             <p style={{fontSize:13}}>Computer Science Student - Software Engineer - Programmer</p>
             
             <p style={{padding:10}}>
-                Test!! This is my personal website. Here you can find information about me and my projects.
+                Welcome! This is my personal website. Here you can find information about me and my projects.
             </p>
             <div style={{flexDirection:'row', width:'100%', height:60}}>
                 <a href="https://www.linkedin.com/in/charis-piotopoulos/">
