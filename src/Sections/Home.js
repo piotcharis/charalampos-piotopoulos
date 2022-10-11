@@ -17,7 +17,7 @@ const styleText = {
 const Home = (props) => {
     return (
         <div style={styleText}>
-            <h1 className="title" style={{color:'#D36135'}}>Charis Piotopoulos</h1>
+            <h1 className="title" style={{color:'#D36135'}}>Charalampoooooos Piotopoulos</h1>
             <p style={{fontSize:13}}>Computer Science Student - Software Engineer - Programmer</p>
             
             <p style={{padding:10}}>
