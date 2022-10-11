@@ -51,7 +51,7 @@ function Projects () {
             temp = "horizontal";
         }
         return temp;
-    };
+    }
 
     return (
         <div style={style}>
