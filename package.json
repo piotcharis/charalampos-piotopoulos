@@ -10,7 +10,7 @@
     "bootstrap": "^5.2.1",
     "gh-pages": "^4.0.0",
     "prop-types": "^15.8.1",
-    "react": "^16.11.0",
+    "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-card-carousel": "^1.1.3",
     "react-chrono": "^1.19.1",
