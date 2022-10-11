@@ -1,24 +1,22 @@
 {
-  "main.css": "/static/css/main.3d83954e.chunk.css",
-  "main.js": "/static/js/main.aa83e2b9.chunk.js",
-  "main.js.map": "/static/js/main.aa83e2b9.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.cf893e8a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.cf893e8a.js.map",
-  "static/css/2.92d4f85b.chunk.css": "/static/css/2.92d4f85b.chunk.css",
-  "static/js/2.20d9ef26.chunk.js": "/static/js/2.20d9ef26.chunk.js",
-  "static/js/2.20d9ef26.chunk.js.map": "/static/js/2.20d9ef26.chunk.js.map",
-  "static/js/3.32462ebd.chunk.js": "/static/js/3.32462ebd.chunk.js",
-  "static/js/3.32462ebd.chunk.js.map": "/static/js/3.32462ebd.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.aa87c043a1c9f54708cb76c5e99ad200.js": "/precache-manifest.aa87c043a1c9f54708cb76c5e99ad200.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/2.92d4f85b.chunk.css.map": "/static/css/2.92d4f85b.chunk.css.map",
-  "static/css/main.3d83954e.chunk.css.map": "/static/css/main.3d83954e.chunk.css.map",
-  "static/media/arrow-down-white.png": "/static/media/arrow-down-white.73e935cd.png",
-  "static/media/astronaut-standing.png": "/static/media/astronaut-standing.2e6b3985.png",
-  "static/media/astronaut.png": "/static/media/astronaut.672a7fe0.png",
-  "static/media/mandelbrot.png": "/static/media/mandelbrot.fa8b5b56.png",
-  "static/media/search-engine.png": "/static/media/search-engine.d65dc9ed.png",
-  "static/media/top-of-the-hats.png": "/static/media/top-of-the-hats.4e9ed11b.png",
-  "static/media/website-dark.png": "/static/media/website-dark.adef3008.png"
+  "files": {
+    "main.css": "/static/css/main.b6e44aac.css",
+    "main.js": "/static/js/main.2368b63c.js",
+    "static/js/787.f619e1d5.chunk.js": "/static/js/787.f619e1d5.chunk.js",
+    "static/media/search-engine.png": "/static/media/search-engine.59d6fd1eb0925d9ccf9d.png",
+    "static/media/website-dark.png": "/static/media/website-dark.e1af90a214f2c76b29e4.png",
+    "static/media/mandelbrot.png": "/static/media/mandelbrot.7cfc8a9fe4b33fa8100b.png",
+    "static/media/top-of-the-hats.png": "/static/media/top-of-the-hats.81356901c5523a666e35.png",
+    "static/media/astronaut.png": "/static/media/astronaut.0a68aa70ebb41675ecdf.png",
+    "static/media/astronaut-standing.png": "/static/media/astronaut-standing.00331a536e12e2e6c7b1.png",
+    "static/media/arrow-down-white.png": "/static/media/arrow-down-white.c9db993e924d6ec1fcd2.png",
+    "index.html": "/index.html",
+    "main.b6e44aac.css.map": "/static/css/main.b6e44aac.css.map",
+    "main.2368b63c.js.map": "/static/js/main.2368b63c.js.map",
+    "787.f619e1d5.chunk.js.map": "/static/js/787.f619e1d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6e44aac.css",
+    "static/js/main.2368b63c.js"
+  ]
 }
