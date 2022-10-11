@@ -93,7 +93,7 @@ function Projects () {
                             <Card.Body>
                                 <Card.Title>Mandelbrot set</Card.Title>
                                 <Card.Text>
-                                    <p style={styleCardText}>This program was created using C. (repo coming soon...)</p>
+                                    <p style={styleCardText}>This program was created using C.</p>
                                     <a href="https://github.com/piotcharis/Mandelbrot">
                                         <button style={{border:'transparent', background:'transparent', width:50}}>
                                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
