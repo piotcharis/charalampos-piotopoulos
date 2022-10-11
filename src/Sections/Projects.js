@@ -47,9 +47,6 @@ function Projects () {
 
     function getAlignment() {
         let temp = window.innerWidth < 1000 ? "vertical" : "horizontal";
-        if (window.screen.orientation.type === "landscape-primary") {
-            temp = "horizontal";
-        }
         return temp;
     }
 
