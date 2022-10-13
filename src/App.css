@@ -43,13 +43,14 @@
 
 .title {
   padding-bottom: 30px;
-  padding-top: 80px;
+  padding-top: 180px;
   color:#a5adae;
+  font-size: calc(10px + 3vmin);
 }
 
 .mainStyle {
     font-family: Roboto Mono;
-    font-size: auto;
+    font-size: calc(8px + 1.5vmin);
     display: flex;
     flex-direction: column;
     align-items: center;

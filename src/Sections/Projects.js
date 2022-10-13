@@ -61,7 +61,7 @@ function Projects () {
                             <Card.Body>
                                 <Card.Title>This website</Card.Title>
                                 <Card.Text>
-                                    <p style={styleCardText}>This website was created using React.js and Bootstrap.</p>
+                                    <p style={styleCardText}>This website was created using React.js.</p>
                                     <a href="https://github.com/piotcharis/personal_site">
                                         <button style={{border:'transparent', background:'transparent', width:50}}>
                                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>

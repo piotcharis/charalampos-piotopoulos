@@ -12,7 +12,7 @@ const styleImage = {
 
 const styleNavbar = {
   fontWeight: 'bold',
-  fontSize: 'auto',
+  fontSize: 'calc(8px + 1vmin)',
   maxHeight: '100px',
 };
 
@@ -33,10 +33,10 @@ function NavBar(props) {
             style={styleNavbar}
             navbarScroll
           >
-            <Nav.Link href="#aboutMe" style={styleText}>About Me</Nav.Link>
-            <Nav.Link href="#edu" style={styleText}>Education</Nav.Link>
-            <Nav.Link href="#projects" style={styleText}>Projects</Nav.Link>
-            <Nav.Link href="#languages" style={styleText}>Languages and Tools</Nav.Link>
+            <Nav.Link href="#aboutMe" style={styleText}>About Me </Nav.Link>
+            <Nav.Link href="#edu" style={styleText}>Education </Nav.Link>
+            <Nav.Link href="#projects" style={styleText}>Projects </Nav.Link>
+            <Nav.Link href="#languages" style={styleText}>Languages and Tools </Nav.Link>
             <Nav.Link href="#contact" style={styleText}>Contact</Nav.Link>
           </Nav>
           <div onClick={props.onChange}>

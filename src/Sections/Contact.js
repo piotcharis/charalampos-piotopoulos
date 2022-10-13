@@ -8,7 +8,7 @@ const styleInput = {
     margin: '8px 0',
     border: '1px solid #ccc',
     borderRadius: '4px',
-    height: '50px',
+    height: 'auto',
     boxSizing: 'border-box'
 }
 

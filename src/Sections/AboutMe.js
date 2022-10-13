@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 const style = {
     fontFamily: 'Roboto Mono',
-    fontSize: 'auto',
+    fontSize: 'calc(8px + 1vmin)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -18,7 +18,7 @@ const style = {
 
 const styleP = {
     textAlign: 'left',
-    alignItems: "right"
+    alignItems: 'right'
 };
 
 function getAge() {
@@ -40,10 +40,10 @@ const AboutMe = () => {
         <div style={style}>
             <Row xs={1} md={2} className="g-4">
                 <Col style={{textAlign:'center', margin:'auto'}}>
-                    <img src={require("./resources/astronaut-standing.png")} alt="astronaut" style={{width:'28%', height:'auto'}}/>
+                    <img src={require("./resources/astronaut-standing.png")} alt="astronaut" style={{width:'25%', height:'auto'}}/>
                 </Col>
                 <Col>
-                    <h1 className="title">About me</h1>
+                    <h1 className="title" style={{paddingTop:'30px'}}>About me</h1>
 
                     <p style={styleP}>
                         <p>My name is Charalampos Piotopoulos, I am {getAge()} years old, from Greece and I study Computer Science at the Technical University of Munich (TUM). </p>

@@ -4,8 +4,8 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import "../App.css"
 
 const styleIcon = {
-    width: 60,
-    height: 65,
+    width: window.innerWidth > 1500 ? 80 : 60,
+    height: window.innerWidth > 1500 ? 85 : 65,
     padding: 10
 };
 
@@ -23,7 +23,7 @@ const LanguagesAndTools = () => {
                 </OverlayTrigger>
 
                 <OverlayTrigger placement="right" delay={{show: 250, hide: 400}} overlay={<Tooltip id="assembly">Assembly</Tooltip>}>
-                <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html/"><img src="https://user-images.githubusercontent.com/79626497/189353214-f5308df0-abb6-4ccf-8643-ba8cfbc05b9c.png" alt="Assembly" style={{width: 75, height: 70, padding:10}} /></a>
+                <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html/"><img src="https://user-images.githubusercontent.com/79626497/189353214-f5308df0-abb6-4ccf-8643-ba8cfbc05b9c.png" alt="Assembly" style={{width: window.innerWidth > 1500 ? 95 : 75, height: window.innerWidth > 1500 ? 90 : 70, padding:10}} /></a>
                 </OverlayTrigger>
 
                 <OverlayTrigger placement="right" delay={{show: 250, hide: 400}} overlay={<Tooltip id="ocaml">Ocaml</Tooltip>}>

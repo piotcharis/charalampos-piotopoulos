@@ -3,7 +3,7 @@ import "../App.css"
 
 const styleText = {
     fontFamily: 'Roboto Mono',
-    fontSize: 'auto',
+    fontSize: 'calc(8px + 1vmin)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -18,7 +18,7 @@ const Home = (props) => {
     return (
         <div style={styleText}>
             <h1 className="title" style={{color:'#D36135'}}>Charalampos Piotopoulos</h1>
-            <p style={{fontSize:13}}>Computer Science Student - Software Engineer - Programmer</p>
+            <p style={{fontSize:'80%'}}>Computer Science Student - Software Engineer - Programmer</p>
             
             <p style={{padding:10}}>
                 Welcome! This is my personal website. Here you can find information about me and my projects.

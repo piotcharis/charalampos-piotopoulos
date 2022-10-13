@@ -37,7 +37,7 @@ function App() {
       </div>
 
       <div id='edu'>
-        <Education isDark={isDark}/>
+        <Education />
       </div>
 
       <div id='projects'>
