@@ -12,6 +12,7 @@ const styleImage = {
 
 const styleNavbar = {
   fontWeight: 'bold',
+  fontFamily: 'Rubik',
   fontSize: 'calc(8px + 1vmin)',
   maxHeight: '100px',
 };

@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css"
 
 const styleInput = {
-    fontFamily: 'Roboto Mono',
+    fontFamily: 'Rubik',
     width: '80%',
     padding: '12px 20px',
     margin: '8px 0',
@@ -24,7 +24,7 @@ const Contact = () => {
                 <input type="text" name="subject" required placeholder="Subject" style={styleInput} />
                 <input type="hidden" name="_next" value="http://charalampos-piotopoulos.com/thanks.html" />
                 <textarea type="text" name="message" required placeholder="Your message" style={{
-                        fontFamily: 'Roboto Mono',
+                        fontFamily: 'Rubik',
                         width: '80%',
                         border: '1px solid #ccc',
                         borderRadius: '4px',
@@ -35,7 +35,7 @@ const Contact = () => {
                 }} />
 
                 <button type="submit" style={{
-                    fontFamily: 'Roboto Mono',
+                    fontFamily: 'Rubik',
                     width: '80%',
                     backgroundColor: '#D36135',
                     color: 'white',

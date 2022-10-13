@@ -3,7 +3,7 @@ import { Timeline, Event } from "react-timeline-scribble";
 import "../App.css"
 
 const style = {
-    fontFamily: 'Roboto Mono',
+    fontFamily: 'Rubik',
     fontSize: 'calc(8px + 1vmin)',
     display: 'flex',
     flexDirection: 'column',

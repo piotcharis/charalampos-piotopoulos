@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 const style = {
-    fontFamily: 'Roboto Mono',
+    fontFamily: 'Rubik',
     fontSize: 'calc(8px + 1vmin)',
     display: 'flex',
     flexDirection: 'column',

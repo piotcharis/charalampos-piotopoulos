@@ -6,7 +6,7 @@ import ReactCardCarousel from "react-card-carousel";
 
 
 const style = {
-    fontFamily: 'Roboto Mono',
+    fontFamily: 'Rubik',
     fontSize: 'auto',
     display: 'flex',
     flexDirection: 'column',
