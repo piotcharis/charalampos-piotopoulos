@@ -24,7 +24,7 @@ function NavBar(props) {
   };
 
   return (
-    <Navbar bg="" expand="lg" sticky='top'>
+    <Navbar bg="" expand="lg" sticky='top' style={{backgroundColor: props.isDark ? '#232C33' : '#B9BDC4'}}>
       <Container fluid>
         <Navbar.Brand href="#"><img src={Astronaut} alt="Astronaut" style={styleImage}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -34,11 +34,11 @@ function NavBar(props) {
             style={styleNavbar}
             navbarScroll
           >
-            <Nav.Link href="#aboutMe" style={styleText}>About Me </Nav.Link>
-            <Nav.Link href="#edu" style={styleText}>Education </Nav.Link>
-            <Nav.Link href="#projects" style={styleText}>Projects </Nav.Link>
-            <Nav.Link href="#languages" style={styleText}>Languages and Tools </Nav.Link>
-            <Nav.Link href="#contact" style={styleText}>Contact</Nav.Link>
+            <Nav.Link href="#aboutMe" style={styleText}>/About Me </Nav.Link>
+            <Nav.Link href="#edu" style={styleText}>/Education </Nav.Link>
+            <Nav.Link href="#projects" style={styleText}>/Projects </Nav.Link>
+            <Nav.Link href="#languages" style={styleText}>/Languages and Tools </Nav.Link>
+            <Nav.Link href="#contact" style={styleText}>/Contact</Nav.Link>
           </Nav>
           <div onClick={props.onChange}>
             <ModeButton />

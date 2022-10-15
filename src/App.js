@@ -8,6 +8,7 @@ import LanguagesAndTools from './Sections/LanguagesAndTools';
 import Contact from './Sections/Contact';
 import TopButton from './Sections/ToTopButton';
 import Projects from './Sections/Projects';
+import Fade from 'react-reveal/Fade';
 
 function App() {
 
@@ -20,37 +21,37 @@ function App() {
 
   return (
     <div id='home' style={style}>
-      <div id='top'>
-        <Navbar isDark={isDark} onChange={()=>setIsDark(current => !current)} />
-      </div>
-      
-      <div style={{height:'100vh'}}>
-        <Home isDark={isDark} />
+      <TopButton />
+
+      <div >
+          <Navbar isDark={isDark} onChange={()=>setIsDark(current => !current)} id='top' />
       </div>
 
-      <div>
-        <TopButton />
+      <div style={{height:'100vh', background:isDark ? '#232C33' : '#B9BDC4'}}>
+          <Home isDark={isDark} />
       </div>
 
-      <div id='aboutMe'>
-        <AboutMe />
-      </div>
+      <Fade duration={1500} bottom={true}>
+        <div id='aboutMe'>
+          <AboutMe />
+        </div>
 
-      <div id='edu'>
-        <Education />
-      </div>
+        <div id='edu'>
+          <Education />
+        </div>
 
-      <div id='projects'>
-        <Projects />
-      </div>
+        <div id='projects'>
+          <Projects />
+        </div>
 
-      <div id='languages'>
-        <LanguagesAndTools />
-      </div>
+        <div id='languages'>
+          <LanguagesAndTools />
+        </div>
 
-      <div id='contact'>
-        <Contact />
-      </div>
+        <div id='contact'>
+          <Contact />
+        </div>
+      </Fade>
     </div>
 
   );

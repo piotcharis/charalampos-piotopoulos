@@ -9,9 +9,8 @@ const styleText = {
     alignItems: 'center',
     justifyContent: 'center',
     paddingDown: 20,
-    margin: 20,
     textAlign: 'center',
-    height:'85vh'
+    height:'85vh',
 };
 
 const Home = (props) => {
