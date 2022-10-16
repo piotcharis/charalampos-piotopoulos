@@ -23,7 +23,7 @@ const TopButton = () => {
         width: 50,
         height: 50,
         borderRadius: '50%',
-        backgroundColor: over ? "black" : "#D36135",
+        backgroundColor: over ? "#85807f" : "#D36135",
         border: 'none',
         cursor: 'pointer',
         boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
