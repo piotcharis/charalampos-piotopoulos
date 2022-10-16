@@ -14,17 +14,17 @@ const styleNavbar = {
   fontWeight: 'bold',
   fontFamily: 'Rubik',
   fontSize: 'calc(8px + 1vmin)',
-  maxHeight: '100px',
+  maxHeight: '0px',
 };
 
 function NavBar(props) {
 
   const styleText = {
-    color: props.isDark ? '#FFFFFF' : '#526062'
+    color: '#FFFFFF'
   };
 
   return (
-    <Navbar bg="" expand="lg" sticky='top' style={{backgroundColor: props.isDark ? '#232C33' : '#B9BDC4'}}>
+    <Navbar bg="" expand="lg" sticky='top' style={{backgroundColor: props.isDark ? '#232C33' : '#85807f'}}>
       <Container fluid>
         <Navbar.Brand href="#"><img src={Astronaut} alt="Astronaut" style={styleImage}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -38,10 +38,10 @@ function NavBar(props) {
             <Nav.Link href="#projects" style={styleText}>/Projects </Nav.Link>
             <Nav.Link href="#languages" style={styleText}>/Languages and Tools </Nav.Link>
             <Nav.Link href="#contact" style={styleText}>/Contact</Nav.Link>
+            <div onClick={props.onChange}>
+              <ModeButton />
+            </div>
           </Nav>
-          <div onClick={props.onChange}>
-            <ModeButton />
-          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

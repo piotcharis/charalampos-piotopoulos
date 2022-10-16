@@ -27,7 +27,7 @@ function App() {
           <NavBar isDark={isDark} onChange={()=>setIsDark(current => !current)} id='top' />
       </div>
 
-      <div style={{height:'100vh', background:isDark ? '#232C33' : '#B9BDC4'}}>
+      <div style={{height:'100vh', background:isDark ? '#232C33' : '#85807f'}}>
           <Home isDark={isDark} />
       </div>
 
