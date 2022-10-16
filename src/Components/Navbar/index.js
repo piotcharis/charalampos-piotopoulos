@@ -2,7 +2,7 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Astronaut from "./resources/astronaut.png";
+import Astronaut from "./resources/logo/astronaut.png";
 import ModeButton from "./ModeButton";
 
 const styleImage = {
@@ -32,7 +32,6 @@ function NavBar(props) {
           <Nav
             className="me-auto my-2 my-lg-0"
             style={styleNavbar}
-            navbarScroll
           >
             <Nav.Link href="#aboutMe" style={styleText}>/About Me </Nav.Link>
             <Nav.Link href="#edu" style={styleText}>/Education </Nav.Link>

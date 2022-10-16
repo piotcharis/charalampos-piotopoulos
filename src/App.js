@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import Navbar from './Components/Navbar';
 import AboutMe from './Sections/AboutMe';
 import Home from './Sections/Home';
 import Education from './Sections/Education';
@@ -9,6 +8,7 @@ import Contact from './Sections/Contact';
 import TopButton from './Sections/ToTopButton';
 import Projects from './Sections/Projects';
 import Fade from 'react-reveal/Fade';
+import NavBar from './Components/Navbar';
 
 function App() {
 
@@ -24,7 +24,7 @@ function App() {
       <TopButton />
 
       <div >
-          <Navbar isDark={isDark} onChange={()=>setIsDark(current => !current)} id='top' />
+          <NavBar isDark={isDark} onChange={()=>setIsDark(current => !current)} id='top' />
       </div>
 
       <div style={{height:'100vh', background:isDark ? '#232C33' : '#B9BDC4'}}>

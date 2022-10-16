@@ -13,7 +13,7 @@ const style = {
     padding: 20,
     margin: 25,
     textAlign: 'center',
-    paddingTop: 30
+    paddingTop: 80
 };
 
 const styleP = {
