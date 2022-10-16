@@ -6,10 +6,10 @@ import Education from './Sections/Education';
 import LanguagesAndTools from './Sections/LanguagesAndTools';
 import Contact from './Sections/Contact';
 import TopButton from './Sections/ToTopButton';
-import Projects from './Sections/Projects';
 import Fade from 'react-reveal/Fade';
 import NavBar from './Components/Navbar';
 import ModeButton from './Components/Navbar/ModeButton';
+import Projects from './Sections/Projects';
 
 function App() {
 

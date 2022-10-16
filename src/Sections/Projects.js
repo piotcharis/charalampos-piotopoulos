@@ -1,128 +1,140 @@
-import React from "react";
-import "../App.css"
-import Card from 'react-bootstrap/Card';
-import ReactCardCarousel from "react-card-carousel";
+import React, {useState} from "react";
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import '../App.css'
 
-
-
-const style = {
-    fontFamily: 'Rubik',
-    fontSize: 'auto',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-};
-
-function Projects () {
-    const CONTAINER_STYLE = {
-          position: "relative",
-          height: "60vh",
-          width: window.innerWidth > 1000 ? "70vw" : "100vw",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center"
+function Projects() {
+    const style = {
+        fontFamily: 'Rubik',
+        fontSize: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
     };
 
-    const CARD_STYLE = {
-          height: "auto",
-          width: "auto",
-          paddingTop: "0px",
-          textAlign: "center",
-          color: "#FFF",
-          borderRadius: "0px",
-          boxSizing: "border-box"
-    };
-
-    const styleCard = {
-        width:'auto',
-        height:'auto'
-    };
+    const itemData = [
+        {img: require("./resources/website-dark.png"),
+        title: 'This website',
+        description: 'This website was created using React.js, HTML and CSS.',
+        git: 'https://github.com/piotcharis/personal_site', 
+        id: 1},
+        {img: require("./resources/search-engine.png"), 
+        title: 'Pingu Search Engine', 
+        description: 'This app was created using Java.',
+        git: 'https://github.com/piotcharis/SearchEnginePGdP',
+        id: 2},
+        {img: require("./resources/mandelbrot.png"),
+        title: 'Mandelbrot set', 
+        description: 'This program was created using C.',
+        git: 'https://github.com/piotcharis/Mandelbrot',
+        id: 3},
+        {img: require("./resources/top-of-the-hats.png"),
+        title: 'Top of the hats', 
+        description: 'This program was created using Java and Java Swing.',
+        git: 'https://github.com/piotcharis/TopOfTheHats',
+        id: 4}
+    ];
 
     const styleCardText = {
         fontSize: window.innerWidth > 1000 ? 15 : 12, 
         height:'auto'
     };
 
-    function getAlignment() {
-        let temp = window.innerWidth < 1000 ? "vertical" : "horizontal";
-        return temp;
-    }
+    const [over1, setOver1] = useState(false);
+    const [over2, setOver2] = useState(false);
+    const [over3, setOver3] = useState(false);
+    const [over4, setOver4] = useState(false);
 
     return (
         <div style={style}>
             <h1 className="title">Projects</h1>
-            <div style={CONTAINER_STYLE}>
-                <ReactCardCarousel autoplay={false} alignment={getAlignment()}>
-                    <div style={CARD_STYLE}>
-                        <Card bg='Dark' text='dark' style={styleCard}>
-                            <Card.Img variant="top" src={require("./resources/website-dark.png")} />
-                            <Card.Body>
-                                <Card.Title>This website</Card.Title>
-                                <Card.Text>
-                                    <p style={styleCardText}>This website was created using React.js.</p>
-                                    <a href="https://github.com/piotcharis/personal_site">
-                                        <button style={{border:'transparent', background:'transparent', width:50}}>
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
-                                        </button>
-                                    </a>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+            <ImageList sx={{ width: '95vw', height: '100%' }} cols={window.innerWidth < 1000 ? 1 : 2} rowHeight={'10rem'} gap={9} style={{padding:'1rem', textAlign:'center', fontFamily:'Rubik, sans-serif'}}>
+                <ImageListItem key={itemData[0]}>
+                    <img
+                        src={`${itemData[0].img}?w=164&h=164&fit=crop&auto=format`}
+                        srcSet={`${itemData[0].img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                        alt={itemData[0].title}
+                        loading="lazy"
+                        style={{position:'relative', display:'block', overflow:'hidden'}}
+                    />
+                    <div style={{position:'absolute', flexDirection:'column', justifyContent:'center', display:'flex' , alignItems:'center', width:'100%', height:'100%', backgroundColor:'#D36135', opacity:over1 ? '0.88' : '0', color:'white', fontFamily:'Rubik, sans-serif', fontWeight:'800', fontSize:'1.3rem', transition:'0.5s'}}
+                    onMouseEnter={() => setOver1(true)} 
+                    onMouseLeave={() => setOver1(false)}>
+                        {itemData[0].title}
+                        <p style={styleCardText}>{itemData[0].description}</p>
+                        <a href={itemData[0].git}>
+                            <button style={{border:'transparent', background:'transparent', width:'4rem'}}>
+                                <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' alt="GitHub"/>
+                            </button>
+                        </a>
                     </div>
-                    <div style={CARD_STYLE}>
-                        <Card bg='Dark' text='dark' style={styleCard}>
-                            <Card.Img variant="top" src={require("./resources/search-engine.png")} />
-                            <Card.Body>
-                                <Card.Title>Pingu Search Engine</Card.Title>
-                                <Card.Text>
-                                    <p style={styleCardText}>This app was created using Java.</p>
-                                    <a href="https://github.com/piotcharis/SearchEnginePGdP">
-                                        <button style={{border:'transparent', background:'transparent', width:50}}>
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
-                                        </button>
-                                    </a>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+                </ImageListItem>
+                <ImageListItem key={itemData[1]}>
+                    <img
+                        src={`${itemData[1].img}?w=164&h=164&fit=crop&auto=format`}
+                        srcSet={`${itemData[1].img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                        alt={itemData[1].title}
+                        loading="lazy"
+                        style={{position:'relative', display:'block', overflow:'hidden'}}
+                    />
+                    <div style={{position:'absolute', flexDirection:'column', justifyContent:'center', display:'flex' , alignItems:'center', width:'100%', height:'100%', backgroundColor:'#D36135', opacity:over2 ? '0.88' : '0', color:'white', fontFamily:'Rubik, sans-serif', fontWeight:'800', fontSize:'1.3rem', transition:'0.5s'}}
+                    onMouseEnter={() => setOver2(true)} 
+                    onMouseLeave={() => setOver2(false)}>
+                        {itemData[1].title}
+                        <p style={styleCardText}>{itemData[1].description}</p>
+                        <a href={itemData[1].git}>
+                            <button style={{border:'transparent', background:'transparent', width:'4rem'}}>
+                                <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' alt="GitHub"/>
+                            </button>
+                        </a>
                     </div>
-                    <div style={CARD_STYLE}>
-                        <Card bg='Dark' text='dark' style={styleCard}>
-                            <Card.Img variant="top" src={require("./resources/mandelbrot.png")} />
-                            <Card.Body>
-                                <Card.Title>Mandelbrot set</Card.Title>
-                                <Card.Text>
-                                    <p style={styleCardText}>This program was created using C.</p>
-                                    <a href="https://github.com/piotcharis/Mandelbrot">
-                                        <button style={{border:'transparent', background:'transparent', width:50}}>
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
-                                        </button>
-                                    </a>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+                </ImageListItem>
+                <ImageListItem key={itemData[2]}>
+                    <img
+                        src={`${itemData[2].img}?w=164&h=164&fit=crop&auto=format`}
+                        srcSet={`${itemData[2].img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                        alt={itemData[2].title}
+                        loading="lazy"
+                        style={{position:'relative', display:'block', overflow:'hidden'}}
+                    />
+                    <div style={{position:'absolute', flexDirection:'column', justifyContent:'center', display:'flex' , alignItems:'center', width:'100%', height:'100%', backgroundColor:'#D36135', opacity:over3 ? '0.88' : '0', color:'white', fontFamily:'Rubik, sans-serif', fontWeight:'800', fontSize:'1.3rem', transition:'0.5s'}}
+                    onMouseEnter={() => setOver3(true)} 
+                    onMouseLeave={() => setOver3(false)}>
+                        {itemData[2].title}
+                        <p style={styleCardText}>{itemData[2].description}</p>
+                        <a href={itemData[2].git}>
+                            <button style={{border:'transparent', background:'transparent', width:'4rem'}}>
+                                <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' alt="GitHub"/>
+                            </button>
+                        </a>
                     </div>
-                    <div style={CARD_STYLE}>
-                        <Card bg='Dark' text='dark' style={styleCard}>
-                            <Card.Img variant="top" src={require("./resources/top-of-the-hats.png")} />
-                            <Card.Body>
-                                <Card.Title>Top of the Hats</Card.Title>
-                                <Card.Text>
-                                    <p style={styleCardText}>This program was created using Java and Java Swing.</p>
-                                    <a href="https://github.com/piotcharis/TopOfTheHats">
-                                        <button style={{border:'transparent', background:'transparent', width:50, paddingRight:10}}>
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
-                                        </button>
-                                    </a>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+                </ImageListItem>
+                <ImageListItem key={itemData[3]}>
+                    <img
+                        src={`${itemData[3].img}?w=164&h=164&fit=crop&auto=format`}
+                        srcSet={`${itemData[3].img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                        alt={itemData[3].title}
+                        loading="lazy"
+                        style={{position:'relative', display:'block', overflow:'hidden'}}
+                    />
+                    <div style={{position:'absolute', flexDirection:'column', justifyContent:'center', display:'flex' , alignItems:'center', width:'100%', height:'100%', backgroundColor:'#D36135', opacity:over4 ? '0.88' : '0', color:'white', fontFamily:'Rubik, sans-serif', fontWeight:'800', fontSize:'1.3rem', transition:'0.5s'}}
+                    onMouseEnter={() => setOver4(true)} 
+                    onMouseLeave={() => setOver4(false)}>
+                        {itemData[3].title}
+                        <p style={styleCardText}>{itemData[3].description}</p>
+                        <a href={itemData[3].git}>
+                            <button style={{border:'transparent', background:'transparent', width:'4rem'}}>
+                                <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' alt="GitHub"/>
+                            </button>
+                        </a>
                     </div>
-                </ReactCardCarousel>
-            </div>
+                </ImageListItem>
+            </ImageList>
         </div>
-    );
+    )
 }
 
 export default Projects;
+
