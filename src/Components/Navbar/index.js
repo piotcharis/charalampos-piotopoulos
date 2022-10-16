@@ -1,51 +1,133 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Astronaut from "./resources/logo/astronaut.png";
-import ModeButton from "./ModeButton";
+import styled from "styled-components";
 
-const styleImage = {
-    width: 40,
-    height: 40
-};
+const StyledMenu = styled.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #FFFFFF;
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+  height: 100vh;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  z-Index: 2;
 
-const styleNavbar = {
-  fontWeight: 'bold',
-  fontFamily: 'Rubik',
-  fontSize: 'calc(8px + 1vmin)',
-  maxHeight: '0px',
-};
+  @media (max-width: 576px) {
+      width: 100%;
+    }
 
-function NavBar(props) {
+  a {
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    color: #0D0C1D;
+    text-decoration: none;
+    transition: color 0.3s linear;
 
-  const styleText = {
-    color: '#FFFFFF'
-  };
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
 
+  a:hover {
+    text-decoration: underline;
+  }
+`
+
+const Menu = ({ open }) => {
   return (
-    <Navbar bg="" expand="lg" sticky='top' style={{backgroundColor: props.isDark ? '#232C33' : '#85807f'}}>
-      <Container fluid>
-        <Navbar.Brand href="#"><img src={Astronaut} alt="Astronaut" style={styleImage}/></Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={styleNavbar}
-          >
-            <Nav.Link href="#aboutMe" style={styleText}>/About Me </Nav.Link>
-            <Nav.Link href="#edu" style={styleText}>/Education </Nav.Link>
-            <Nav.Link href="#projects" style={styleText}>/Projects </Nav.Link>
-            <Nav.Link href="#languages" style={styleText}>/Languages and Tools </Nav.Link>
-            <Nav.Link href="#contact" style={styleText}>/Contact</Nav.Link>
-            <div onClick={props.onChange}>
-              <ModeButton />
-            </div>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
+    <StyledMenu open={open}>
+        <a href="#aboutMe">
+          /About me
+        </a>
+      <a href="#edu">
+        /Education
+      </a>
+      <a href="#projects">
+        /Projects
+      </a>
+      <a href="#languages">
+        /Languages and Tools
+      </a>
+      <a href="#contact">
+        /Contact
+      </a>
+    </StyledMenu>
+  )
 }
 
-export default NavBar;
+const StyledBurger = styled.button`
+  position: absolute;
+  top: 5%;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: ${({ open }) => open ? '#0D0C1D' : '#EFFFFA'};
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => open ? '0' : '1'};
+      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+    }
+  }
+`
+
+const Burger = ({ open, setOpen }) => {
+  return (
+    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <div />
+      <div />
+      <div />
+    </StyledBurger>
+  )
+}
+
+const Navbar = (props) => {
+  const [open, setOpen] = React.useState(false);
+  const node = React.useRef();
+  return (
+    <div>
+      <div ref={node}>
+        <Burger open={open} setOpen={setOpen} />
+        <Menu open={open} setOpen={setOpen} />
+      </div>
+    </div>
+  )  
+}
+
+
+export default Navbar;

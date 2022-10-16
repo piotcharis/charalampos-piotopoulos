@@ -14,7 +14,7 @@ const ModeButton = () => {
         style={{ marginBottom: 'auto' }}
         checked={isDarkMode}
         onChange={toggleDarkMode}
-        size={40}
+        size={43}
       />
     </>
   );

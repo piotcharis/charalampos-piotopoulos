@@ -9,6 +9,7 @@ import TopButton from './Sections/ToTopButton';
 import Projects from './Sections/Projects';
 import Fade from 'react-reveal/Fade';
 import NavBar from './Components/Navbar';
+import ModeButton from './Components/Navbar/ModeButton';
 
 function App() {
 
@@ -23,8 +24,14 @@ function App() {
     <div id='home' style={style}>
       <TopButton />
 
-      <div >
-          <NavBar isDark={isDark} onChange={()=>setIsDark(current => !current)} id='top' />
+      <div className='darkSwitch'>
+        <div onClick={()=>setIsDark(current => !current)}>
+          <ModeButton />
+        </div>
+      </div>
+
+      <div>
+          <NavBar id='top' />
       </div>
 
       <div style={{height:'100vh', background:isDark ? '#232C33' : '#85807f'}}>

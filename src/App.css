@@ -78,3 +78,21 @@
   80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
   100% { transform: scale(1)   translate(10px, -30px); }
 }
+
+.darkSwitch {
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 4.5%;
+  right: 1.5rem;
+  float: right;
+  align-items: flex-end;
+}
