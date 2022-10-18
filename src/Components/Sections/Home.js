@@ -1,25 +1,17 @@
 import React from "react";
-import "../App.css"
+import "../../App.css"
 
-const styleText = {
-    fontFamily: 'Rubik',
-    fontSize: 'calc(8px + 1vmin)',
-    color: 'white',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingDown: 20,
-    textAlign: 'center',
-    height: '100vh',
-    position: 'relative',
-    overflow: 'hidden',
-};
+const buttonStyle = {
+    border: 'transparent', 
+    background: 'transparent', 
+    width: 70, 
+    padding: 10
+}
 
 const Home = (props) => {
     return (
         <>
-            <div style={styleText}>
+            <div className="divHome">
                 <h1 className="title" style={{ color: 'white', zIndex:'1'}}>Charalampos Piotopoulos</h1>
                 <p style={{ fontSize: '80%', zIndex:'1' }}>Computer Science Student - Software Engineer - Programmer</p>
 
@@ -28,12 +20,12 @@ const Home = (props) => {
                 </p>
                 <div style={{ flexDirection: 'row', width: '100%', height: 60, zIndex:'1' }}>
                     <a href="https://www.linkedin.com/in/charis-piotopoulos/">
-                        <button style={{ border: 'transparent', background: 'transparent', width: 70, padding: 10 }}>
+                        <button style={buttonStyle}>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
                         </button>
                     </a>
                     <a href="https://github.com/piotcharis/">
-                        <button style={{ border: 'transparent', background: 'transparent', width: 70, padding: 10 }}>
+                        <button style={buttonStyle}>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
                         </button>
                     </a>

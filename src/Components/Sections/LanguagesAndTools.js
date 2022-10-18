@@ -1,7 +1,7 @@
 import React from "react";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import "../App.css"
+import "../../App.css"
 
 const styleIcon = {
     width: window.innerWidth > 1500 ? 80 : 60,

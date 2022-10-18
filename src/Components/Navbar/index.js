@@ -41,28 +41,6 @@ const StyledMenu = styled.nav`
   }
 `
 
-const Menu = ({ open }) => {
-  return (
-    <StyledMenu open={open}>
-        <a href="#aboutMe">
-          /About me
-        </a>
-      <a href="#edu">
-        /Education
-      </a>
-      <a href="#projects">
-        /Projects
-      </a>
-      <a href="#languages">
-        /Languages and Tools
-      </a>
-      <a href="#contact">
-        /Contact
-      </a>
-    </StyledMenu>
-  )
-}
-
 const StyledBurger = styled.button`
   position: absolute;
   top: 5%;
@@ -106,6 +84,28 @@ const StyledBurger = styled.button`
   }
 `
 
+const Menu = ({ open }) => {
+  return (
+    <StyledMenu open={open}>
+      <a href="#aboutMe">
+        /About me
+      </a>
+      <a href="#edu">
+        /Education
+      </a>
+      <a href="#projects">
+        /Projects
+      </a>
+      <a href="#languages">
+        /Languages and Tools
+      </a>
+      <a href="#contact">
+        /Contact
+      </a>
+    </StyledMenu>
+  )
+}
+
 const Burger = ({ open, setOpen }) => {
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
@@ -116,7 +116,7 @@ const Burger = ({ open, setOpen }) => {
   )
 }
 
-const Navbar = (props) => {
+const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
   return (

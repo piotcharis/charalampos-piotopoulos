@@ -96,3 +96,82 @@
   float: right;
   align-items: flex-end;
 }
+
+.divEdu {
+  font-family: Rubik;
+  font-size: calc(8px + 1vmin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.divAbout {
+  font-family: Rubik;
+  font-size: calc(8px + 1vmin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 25px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.divProjects {
+  font-family: Rubik;
+  font-size: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.divHome {
+  font-family: Rubik;
+  font-size: calc(8px + 1vmin);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactInput {
+  font-family: Rubik;
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.contactSubmit {
+  font-family: Rubik;
+  width: 80%;
+  background-color: #D36135;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.topButtonImg {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

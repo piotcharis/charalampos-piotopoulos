@@ -1,20 +1,10 @@
 import React, {useState} from "react";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import '../App.css'
 import Fade from 'react-reveal/Fade';
+import '../../App.css'
 
 function Projects() {
-    const style = {
-        fontFamily: 'Rubik',
-        fontSize: 'auto',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-    };
-
     const itemData = [
         {img: require("./resources/website-dark.png"),
         title: 'This website',
@@ -49,7 +39,7 @@ function Projects() {
     const [over4, setOver4] = useState(false);
 
     return (
-        <div style={style}>
+        <div className="divProjects">
             <h1 className="title">Projects</h1>
             <ImageList sx={{ width: '95vw', height: '100%' }} cols={window.innerWidth < 1000 ? 1 : 2} rowHeight={'10rem'} gap={9} style={{padding:'1rem', textAlign:'center', fontFamily:'Rubik, sans-serif'}}>
                 <Fade delay={50} bottom={true}>

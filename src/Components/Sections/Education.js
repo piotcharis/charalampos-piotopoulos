@@ -1,21 +1,11 @@
 import React, { Fragment } from "react";
-import { Timeline, Event } from "react-timeline-scribble";
-import "../App.css"
 import Fade from 'react-reveal/Fade';
-
-const style = {
-    fontFamily: 'Rubik',
-    fontSize: 'calc(8px + 1vmin)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'left'
-};
+import { Timeline, Event } from "react-timeline-scribble";
+import "../../App.css"
 
 function Education () {
     return (
-        <div style={style}>
+        <div className="divEdu">
             <h1 className="title">Education</h1>
             <Fragment>
                 <Timeline>

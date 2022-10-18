@@ -1,25 +1,7 @@
 import React from "react";
-import "../App.css"
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-
-const style = {
-    fontFamily: 'Rubik',
-    fontSize: 'calc(8px + 1vmin)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-    margin: 25,
-    textAlign: 'center',
-    paddingTop: 80
-};
-
-const styleP = {
-    textAlign: 'left',
-    alignItems: 'right'
-};
+import "../../App.css";
 
 function getAge() {
     let today = new Date();
@@ -30,14 +12,13 @@ function getAge() {
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
     {
         age--;
-    
     }
     return age + "";
 }
 
 const AboutMe = () => {
     return (
-        <div style={style}>
+        <div className="divAbout">
             <Row xs={1} md={2} className="g-4">
                 <Col style={{textAlign:'center', margin:'auto'}}>
                     <img src={require("./resources/astronaut-standing.png")} alt="astronaut" style={{width:'25%', height:'auto'}}/>
@@ -45,7 +26,7 @@ const AboutMe = () => {
                 <Col>
                     <h1 className="title" style={{paddingTop:'30px'}}>About me</h1>
 
-                    <p style={styleP}>
+                    <p style={{textAlign: 'left', alignItems: 'right'}}>
                         <p>My name is Charalampos Piotopoulos, I am {getAge()} years old, from Greece and I study Computer Science at the Technical University of Munich (TUM). </p>
                         <p>I am always trying to evolve and learn new things by working hard and seeking new challenges. 
                         I am passionate about Programming, Technology, Science, Medicine and Space. 

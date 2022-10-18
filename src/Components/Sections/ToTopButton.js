@@ -1,15 +1,7 @@
 import React, {useState} from "react";
 import Arrow from './resources/arrow-up.png';
 import Arrow_Orange from './resources/arrow-up-orange.png';
-import '../App.css';
-
-const styleImage = {
-    width: 30,
-    height: 30,
-    position: 'absolute',
-    top: 10,
-    left: 10
-};
+import '../../App.css';
 
 const TopButton = () => {
     const [visible, setVisible] = useState(false);
@@ -48,7 +40,7 @@ const TopButton = () => {
                     style={styleButton} 
                     onMouseEnter={() => setOver(true)} 
                     onMouseLeave={() => setOver(false)}>
-                        <img src={over ? Arrow_Orange : Arrow} style={styleImage} alt='arrow up' />
+                        <img src={over ? Arrow_Orange : Arrow} className="topButtonImg" alt='arrow up' />
                 </button></a>
         </div>
     );

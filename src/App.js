@@ -1,15 +1,15 @@
-import './App.css';
 import React from 'react';
-import AboutMe from './Sections/AboutMe';
-import Home from './Sections/Home';
-import Education from './Sections/Education';
-import LanguagesAndTools from './Sections/LanguagesAndTools';
-import Contact from './Sections/Contact';
-import TopButton from './Sections/ToTopButton';
 import Fade from 'react-reveal/Fade';
 import NavBar from './Components/Navbar';
-import ModeButton from './Components/Navbar/ModeButton';
-import Projects from './Sections/Projects';
+import ModeButton from './Components/ModeButton';
+import Home from './Components/Sections/Home';
+import AboutMe from './Components/Sections/AboutMe';
+import Education from './Components/Sections/Education';
+import Projects from './Components/Sections/Projects';
+import LanguagesAndTools from './Components/Sections/LanguagesAndTools';
+import Contact from './Components/Sections/Contact';
+import TopButton from './Components/Sections/ToTopButton';
+import './App.css';
 
 function App() {
 
