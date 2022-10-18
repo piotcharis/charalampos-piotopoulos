@@ -118,7 +118,7 @@ function Projects() {
                         </div>
                     </ImageListItem>
                 </Fade>
-                <Fade delay={205} bottom={true}>
+                <Fade delay={165} bottom={true}>
                     <ImageListItem key={itemData[3]}>
                         <img
                             src={`${itemData[3].img}?w=164&h=164&fit=crop&auto=format`}
