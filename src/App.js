@@ -38,7 +38,7 @@ function App() {
           <Home isDark={isDark} />
       </div>
 
-      <Fade duration={1500} bottom={true}>
+      <Fade duration={1000} bottom={true}>
         <div id='aboutMe'>
           <AboutMe />
         </div>
