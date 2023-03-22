@@ -42,6 +42,10 @@ const LanguagesAndTools = () => {
                 <a href="https://html.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" style={styleIcon} /></a>
                 </OverlayTrigger>
 
+                <OverlayTrigger placement="right" delay={{show: 250, hide: 400}} overlay={<Tooltip id="html">MySQL</Tooltip>}>
+                <a href="https://www.mysql.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" style={styleIcon} /></a>
+                </OverlayTrigger>
+
                 <OverlayTrigger placement="right" delay={{show: 250, hide: 400}} overlay={<Tooltip id="latex">LaTeX</Tooltip>}>
                 <a href="https://www.latex-project.org/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" alt="LaTeX" style={styleIcon} /></a>
                 </OverlayTrigger>
