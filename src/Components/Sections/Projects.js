@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import Fade from 'react-reveal/Fade';
 import '../../App.css'
 
 function Projects() {
@@ -42,7 +41,6 @@ function Projects() {
         <div className="divProjects">
             <h1 className="title">Projects</h1>
             <ImageList sx={{ width: '95vw', height: '100%' }} cols={window.innerWidth < 1000 ? 1 : 2} rowHeight={'10rem'} gap={9} style={{padding:'1rem', textAlign:'center', fontFamily:'Rubik, sans-serif'}}>
-                <Fade delay={50} bottom={true}>
                     <ImageListItem key={itemData[0]}>
                         <img
                             src={`${itemData[0].img}?w=164&h=164&fit=crop&auto=format`}
@@ -63,8 +61,6 @@ function Projects() {
                             </a>
                         </div>
                     </ImageListItem>
-                </Fade>
-                <Fade delay={105} bottom={true}>
                     <ImageListItem key={itemData[1]}>
                         <img
                             src={`${itemData[1].img}?w=164&h=164&fit=crop&auto=format`}
@@ -85,8 +81,6 @@ function Projects() {
                             </a>
                         </div>
                     </ImageListItem>
-                </Fade>
-                <Fade delay={155} bottom={true}>
                     <ImageListItem key={itemData[2]}>
                         <img
                             src={`${itemData[2].img}?w=164&h=164&fit=crop&auto=format`}
@@ -107,8 +101,6 @@ function Projects() {
                             </a>
                         </div>
                     </ImageListItem>
-                </Fade>
-                <Fade delay={165} bottom={true}>
                     <ImageListItem key={itemData[3]}>
                         <img
                             src={`${itemData[3].img}?w=164&h=164&fit=crop&auto=format`}
@@ -129,7 +121,6 @@ function Projects() {
                             </a>
                         </div>
                     </ImageListItem>
-                </Fade>
             </ImageList>
         </div>
     )

@@ -37,28 +37,28 @@ function App() {
       <div style={{height:'100vh', background:isDark ? '#232C33' : '#85807f'}}>
           <Home isDark={isDark} />
       </div>
+      
+      <div id='aboutMe'>
+        <AboutMe />
+      </div>
 
-      <Fade duration={1000} bottom={true}>
-        <div id='aboutMe'>
-          <AboutMe />
-        </div>
-
+      <Fade duration={800} bottom={true}>
         <div id='edu'>
           <Education />
         </div>
-
-        <div id='projects'>
-          <Projects />
-        </div>
-
-        <div id='languages'>
-          <LanguagesAndTools />
-        </div>
-
-        <div id='contact'>
-          <Contact />
-        </div>
       </Fade>
+
+      <div id='projects'>
+        <Projects />
+      </div>
+
+      <div id='languages'>
+        <LanguagesAndTools />
+      </div>
+
+      <div id='contact'>
+        <Contact />
+      </div>
     </div>
 
   );
