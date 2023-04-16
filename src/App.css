@@ -44,26 +44,26 @@
 .title {
   padding-bottom: 30px;
   padding-top: 180px;
-  color:#a5adae;
+  color: #a5adae;
   font-size: calc(10px + 3vmin);
 }
 
 .mainStyle {
-    font-family: Rubik;
-    font-size: calc(8px + 1.5vmin);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20;
-    text-align: center;
+  font-family: Rubik;
+  font-size: calc(8px + 1.5vmin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20;
+  text-align: center;
 }
 
 .blob {
   position: absolute;
   top: 0;
   left: 0;
-  fill: #D36135;
+  fill: #d36135;
   width: 50vmax;
   z-index: 0;
   animation: move 10s ease-in-out infinite;
@@ -71,12 +71,24 @@
 }
 
 @keyframes move {
-  0%   { transform: scale(1)   translate(10px, -30px); }
-  38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
-  40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
-  78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
-  80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
-  100% { transform: scale(1)   translate(10px, -30px); }
+  0% {
+    transform: scale(1) translate(10px, -30px);
+  }
+  38% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+  40% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+  78% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+  80% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) translate(10px, -30px);
+  }
 }
 
 .darkSwitch {
@@ -159,7 +171,7 @@
 .contactSubmit {
   font-family: Rubik;
   width: 80%;
-  background-color: #D36135;
+  background-color: #d36135;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -174,4 +186,55 @@
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  background-color: #ebebeb;
+}
+
+.project-card__image {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.project-card__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-card__description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.project-card__technologies {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.project-card__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 30px;
+  padding: 0 30px;
 }
