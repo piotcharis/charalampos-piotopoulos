@@ -24,3 +24,4 @@ jobs:
         server: ilias-piotopoulos.com
         username: u838632010.charalampos-piotopoulos.com
         password: ${{ secrets.FTP_SECRET }}
+        local-dir: build/
