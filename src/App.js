@@ -1,66 +1,66 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
-import NavBar from './Components/Navbar';
-import ModeButton from './Components/ModeButton';
-import Home from './Components/Sections/Home';
-import AboutMe from './Components/Sections/AboutMe';
-import Education from './Components/Sections/Education';
-import Projects from './Components/Sections/Projects';
-import LanguagesAndTools from './Components/Sections/LanguagesAndTools';
-import Contact from './Components/Sections/Contact';
-import TopButton from './Components/Sections/ToTopButton';
-import './App.css';
+import React from "react";
+import Fade from "react-reveal/Fade";
+import NavBar from "./Components/Navbar";
+import ModeButton from "./Components/ModeButton";
+import Home from "./Components/Sections/Home";
+import AboutMe from "./Components/Sections/AboutMe";
+import Education from "./Components/Sections/Education";
+import Projects from "./Components/Sections/Projects";
+import LanguagesAndTools from "./Components/Sections/LanguagesAndTools";
+import Contact from "./Components/Sections/Contact";
+import TopButton from "./Components/Sections/ToTopButton";
+import "./App.css";
 
 function App() {
-
   const [isDark, setIsDark] = React.useState(false);
 
   const style = {
-    backgroundColor: isDark ? '#232C33' : '#FFFFFF',
-    color: isDark ? '#F5F5F5' : '#232C33',
+    backgroundColor: isDark ? "#232C33" : "#FFFFFF",
+    color: isDark ? "#F5F5F5" : "#232C33",
   };
 
   return (
-    <div id='home' style={style}>
+    <div id="home" style={style}>
       <TopButton />
 
-      <div className='darkSwitch'>
-        <div onClick={()=>setIsDark(current => !current)}>
+      <div className="darkSwitch">
+        <div onClick={() => setIsDark((current) => !current)}>
           <ModeButton />
         </div>
       </div>
 
       <div>
-          <NavBar id='top' />
+        <NavBar id="top" />
       </div>
 
-      <div style={{height:'100vh', background:isDark ? '#232C33' : '#85807f'}}>
-          <Home isDark={isDark} />
+      <div
+        style={{ height: "100vh", background: isDark ? "#232C33" : "#606060" }}
+      >
+        <Home isDark={isDark} />
       </div>
-      
-      <div id='aboutMe'>
+
+      <div id="aboutMe">
         <AboutMe />
       </div>
 
       <Fade duration={800} bottom={true}>
-        <div id='edu'>
+        <div id="edu">
           <Education />
         </div>
       </Fade>
 
-      <div id='projects'>
+      <div id="projects">
         <Projects />
       </div>
 
-      <div id='languages'>
+      <div id="languages">
         <LanguagesAndTools />
       </div>
 
-      <div id='contact'>
+      <div id="contact">
         <Contact />
       </div>
     </div>
-
   );
 }
 
