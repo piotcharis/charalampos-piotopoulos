@@ -2,6 +2,8 @@ import React from "react";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import "../../App.css";
+import Postman from "/resources/postman-icon.svg";
+import PostmanCert from "/resources/postman-cert.png";
 
 const styleIcon = {
   width: window.innerWidth > 1500 ? 80 : 60,
@@ -111,6 +113,20 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
               alt="JavaScript"
+              style={styleIcon}
+            />
+          </a>
+        </OverlayTrigger>
+
+        <OverlayTrigger
+          placement="right"
+          delay={{ show: 250, hide: 400 }}
+          overlay={<Tooltip id="node">Node.js</Tooltip>}
+        >
+          <a href="https://nodejs.org/en">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg"
+              alt="Node.js"
               style={styleIcon}
             />
           </a>
@@ -231,26 +247,26 @@ const LanguagesAndTools = () => {
         <OverlayTrigger
           placement="right"
           delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="android">Android</Tooltip>}
+          overlay={<Tooltip id="postman">Postman</Tooltip>}
         >
-          <a href="https://www.android.com/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg"
-              alt="Android"
-              style={styleIcon}
-            />
+          <a href="https://www.postman.com/">
+            <img src={Postman} alt="Postman" style={styleIcon} />
           </a>
         </OverlayTrigger>
 
         <OverlayTrigger
           placement="right"
           delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="apple">Apple</Tooltip>}
+          overlay={
+            <Tooltip id="postman-cert">
+              Postman Student Expert Certification
+            </Tooltip>
+          }
         >
-          <a href="https://www.apple.com/">
+          <a href="https://api.badgr.io/public/assertions/qXe_zpw9TxWoI-mZI9qXsw">
             <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg"
-              alt="Apple"
+              src={PostmanCert}
+              alt="Postman Certification"
               style={styleIcon}
             />
           </a>
