@@ -43,6 +43,10 @@ function App() {
         <AboutMe />
       </div>
 
+      <div id="languages">
+        <LanguagesAndTools />
+      </div>
+
       <Fade duration={800} bottom={true}>
         <div id="edu">
           <Education />
@@ -51,10 +55,6 @@ function App() {
 
       <div id="projects">
         <Projects />
-      </div>
-
-      <div id="languages">
-        <LanguagesAndTools />
       </div>
 
       <div id="contact">

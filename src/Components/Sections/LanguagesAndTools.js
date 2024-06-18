@@ -223,7 +223,7 @@ const LanguagesAndTools = () => {
         >
           <a href="https://gradle.org/">
             <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-plain.svg"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
               alt="Gradle"
               style={styleIcon}
             />
