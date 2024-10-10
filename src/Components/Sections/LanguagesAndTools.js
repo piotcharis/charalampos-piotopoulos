@@ -47,11 +47,39 @@ const LanguagesAndTools = () => {
         <OverlayTrigger
           placement="right"
           delay={{ show: 250, hide: 400 }}
+          overlay={<Tooltip id="c++">C++</Tooltip>}
+        >
+          <a href="https://cplusplus.com/">
+            <img
+              src="https://www.vectorlogo.zone/logos/isocpp/isocpp-icon.svg"
+              alt="C++"
+              style={styleIcon}
+            />
+          </a>
+        </OverlayTrigger>
+
+        <OverlayTrigger
+          placement="right"
+          delay={{ show: 250, hide: 400 }}
           overlay={<Tooltip id="python">Python</Tooltip>}
         >
           <a href="https://www.python.org/">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python"
+              style={styleIcon}
+            />
+          </a>
+        </OverlayTrigger>
+
+        <OverlayTrigger
+          placement="right"
+          delay={{ show: 250, hide: 400 }}
+          overlay={<Tooltip id="pytorch">Pytorch</Tooltip>}
+        >
+          <a href="https://pytorch.org/">
+            <img
+              src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg"
               alt="Python"
               style={styleIcon}
             />
@@ -267,20 +295,6 @@ const LanguagesAndTools = () => {
             <img
               src={PostmanCert}
               alt="Postman Certification"
-              style={styleIcon}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="linux">Linux</Tooltip>}
-        >
-          <a href="https://www.linux.org/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-              alt="Linux"
               style={styleIcon}
             />
           </a>
