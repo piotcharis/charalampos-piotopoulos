@@ -80,7 +80,8 @@ const LanguagesAndTools = () => {
           <a href="https://pytorch.org/">
             <img
               src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg"
-              alt="Python"
+              alt="Pytorch"
+              width="140px"
               style={styleIcon}
             />
           </a>
