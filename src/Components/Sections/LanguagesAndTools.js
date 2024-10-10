@@ -81,8 +81,11 @@ const LanguagesAndTools = () => {
             <img
               src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg"
               alt="Pytorch"
-              width="140px"
-              style={styleIcon}
+              style={{
+                width: 140,
+                height: window.innerWidth > 1500 ? 85 : 65,
+                padding: 10,
+              }}
             />
           </a>
         </OverlayTrigger>
