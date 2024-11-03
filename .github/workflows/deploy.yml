@@ -24,7 +24,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ilias-piotopoulos.com
-        username: u838632010.charalampos-piotopoulos.com
+        server: charalampos-piotopoulos.com
+        username: u698006961.charalampos-piotopoulos.com
         password: ${{ secrets.FTP_SECRET }}
         local-dir: build/
