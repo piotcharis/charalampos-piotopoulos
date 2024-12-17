@@ -13,6 +13,7 @@
     "material-ui": "^0.20.2",
     "node-fetch": "2.6.7",
     "nth-check": "2.1.1",
+    "path-to-regexp": "0.1.12",
     "postcss": "8.4.48",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
