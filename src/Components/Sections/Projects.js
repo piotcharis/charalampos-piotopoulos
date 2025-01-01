@@ -39,10 +39,17 @@ const projects = [
     githubRepo: "https://github.com/piotcharis/personal_site",
   },
   {
-    title: "Pingu Search Engine",
-    description: "This app was created using Java.",
-    image: require("./resources/search-engine.png"),
-    githubRepo: "https://github.com/piotcharis/SearchEnginePGdP",
+    title: "Neural Network for iOCT Image Segmentation",
+    description: "This program was created using Python.",
+    image: require("./resources/prediction.png"),
+    githubRepo:
+      "https://https://github.com/piotcharis/Neural_Network_iOCT_Image_Segmentation",
+  },
+  {
+    title: "Custom Questionnaire",
+    description: "This program was created using PHP and Javascript.",
+    image: require("./resources/questionnaire.png"),
+    githubRepo: "https://https://github.com/piotcharis/Questionnaire",
   },
   {
     title: "Mandelbrot set",
@@ -51,16 +58,22 @@ const projects = [
     githubRepo: "https://github.com/piotcharis/Mandelbrot",
   },
   {
-    title: "Top of the hats",
-    description: "This program was created using Java and Java Swing.",
-    image: require("./resources/top-of-the-hats.png"),
-    githubRepo: "https://github.com/piotcharis/TopOfTheHats",
-  },
-  {
     title: "Peano Curve",
     description: "This program was created using C.",
     image: require("./resources/peano.png"),
     githubRepo: "https://github.com/piotcharis/PeanoCurve",
+  },
+  {
+    title: "Pingu Search Engine",
+    description: "This app was created using Java.",
+    image: require("./resources/search-engine.png"),
+    githubRepo: "https://github.com/piotcharis/SearchEnginePGdP",
+  },
+  {
+    title: "Top of the hats",
+    description: "This program was created using Java and Java Swing.",
+    image: require("./resources/top-of-the-hats.png"),
+    githubRepo: "https://github.com/piotcharis/TopOfTheHats",
   },
 ];
 
