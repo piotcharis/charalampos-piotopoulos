@@ -39,6 +39,13 @@ const projects = [
     githubRepo: "https://github.com/piotcharis/personal_site",
   },
   {
+    title:
+      "Bachelor Thesis: Characterizing and facilitating phase-optimized iOCT visualization for ophthalmic procedures",
+    description: "This program was created using Python.",
+    image: require("./resources/thesis_title.png"),
+    githubRepo: "https://https://github.com/piotcharis/Bachelor_Thesis",
+  },
+  {
     title: "Neural Network for iOCT Image Segmentation",
     description: "This program was created using Python.",
     image: require("./resources/prediction.png"),
