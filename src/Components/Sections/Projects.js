@@ -39,8 +39,7 @@ const projects = [
     githubRepo: "https://github.com/piotcharis/personal_site",
   },
   {
-    title:
-      "Bachelor Thesis: Characterizing and facilitating phase-optimized iOCT visualization for ophthalmic procedures",
+    title: "Bachelor Thesis",
     description: "This program was created using Python.",
     image: require("./resources/thesis_title.png"),
     githubRepo: "https://https://github.com/piotcharis/Bachelor_Thesis",
