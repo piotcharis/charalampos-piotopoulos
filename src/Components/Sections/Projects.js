@@ -42,20 +42,20 @@ const projects = [
     title: "Bachelor Thesis",
     description: "This program was created using Python.",
     image: require("./resources/thesis_title.png"),
-    githubRepo: "https://https://github.com/piotcharis/Bachelor_Thesis",
+    githubRepo: "https://github.com/piotcharis/Bachelor_Thesis",
   },
   {
     title: "Neural Network for iOCT Image Segmentation",
     description: "This program was created using Python.",
     image: require("./resources/prediction.png"),
     githubRepo:
-      "https://https://github.com/piotcharis/Neural_Network_iOCT_Image_Segmentation",
+      "https://github.com/piotcharis/Neural_Network_iOCT_Image_Segmentation",
   },
   {
     title: "Custom Questionnaire",
     description: "This program was created using PHP and Javascript.",
     image: require("./resources/questionnaire.png"),
-    githubRepo: "https://https://github.com/piotcharis/Questionnaire",
+    githubRepo: "https://github.com/piotcharis/Questionnaire",
   },
   {
     title: "Mandelbrot set",
