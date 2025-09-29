@@ -75,6 +75,20 @@ const LanguagesAndTools = () => {
         <OverlayTrigger
           placement="right"
           delay={{ show: 250, hide: 400 }}
+          overlay={<Tooltip id="php">PHP</Tooltip>}
+        >
+          <a href="https://www.php.net/">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+              alt="PHP"
+              style={styleIcon}
+            />
+          </a>
+        </OverlayTrigger>
+
+        <OverlayTrigger
+          placement="right"
+          delay={{ show: 250, hide: 400 }}
           overlay={<Tooltip id="pytorch">Pytorch</Tooltip>}
         >
           <a href="https://pytorch.org/">

@@ -11,14 +11,21 @@ function Education() {
         <Timeline>
           <Fade delay={50} bottom={true}>
             <Event
-              interval={"2021 - present"}
+              interval={"2025 - present"}
+              title={"Technical University of Munich (TUM)"}
+              subtitle={"Computer Science (Master of Science)"}
+            ></Event>
+          </Fade>
+          <Fade delay={100} bottom={true}>
+            <Event
+              interval={"2021 - 2025"}
               title={"Technical University of Munich (TUM)"}
               subtitle={"Computer Science (Bachelor of Science)"}
             >
               Application Subject: Medicine
             </Event>
           </Fade>
-          <Fade delay={100} bottom={true}>
+          <Fade delay={150} bottom={true}>
             <Event
               interval={"2018 - 2021"}
               title={"University of Saarland"}
@@ -30,7 +37,7 @@ function Education() {
               Psychology, Sociology and Clinical Medicine.
             </Event>
           </Fade>
-          <Fade delay={150} bottom={true}>
+          <Fade delay={200} bottom={true}>
             <Event
               interval={"2012 - 2018"}
               title={"German School of Athens (DSA)"}
