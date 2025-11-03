@@ -5,8 +5,8 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #FFFFFF;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+  background: #ffffff;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
   text-align: left;
   padding: 2rem;
@@ -14,19 +14,19 @@ const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  z-Index: 2;
+  z-index: 2;
 
   @media (max-width: 576px) {
-      width: 100%;
-    }
+    width: 100%;
+  }
 
   a {
     font-size: 1.5rem;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: #0D0C1D;
+    color: #0d0c1d;
     text-decoration: none;
     transition: color 0.3s linear;
 
@@ -39,7 +39,7 @@ const StyledMenu = styled.nav`
   a:hover {
     text-decoration: underline;
   }
-`
+`;
 
 const StyledBurger = styled.button`
   position: absolute;
@@ -63,48 +63,39 @@ const StyledBurger = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => open ? '#0D0C1D' : '#EFFFFA'};
+    background: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
-`
+`;
 
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <a href="#aboutMe">
-        /About me
-      </a>
-      <a href="#edu">
-        /Education
-      </a>
-      <a href="#projects">
-        /Projects
-      </a>
-      <a href="#languages">
-        /Languages and Tools
-      </a>
-      <a href="#contact">
-        /Contact
-      </a>
+      <a href="#aboutMe">/About me</a>
+      <a href="#exp">/Experience</a>
+      <a href="#edu">/Education</a>
+      <a href="#projects">/Projects</a>
+      <a href="#languages">/Languages and Tools</a>
+      <a href="#contact">/Contact</a>
     </StyledMenu>
-  )
-}
+  );
+};
 
 const Burger = ({ open, setOpen }) => {
   return (
@@ -113,8 +104,8 @@ const Burger = ({ open, setOpen }) => {
       <div />
       <div />
     </StyledBurger>
-  )
-}
+  );
+};
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -126,8 +117,7 @@ const Navbar = () => {
         <Menu open={open} setOpen={setOpen} />
       </div>
     </div>
-  )  
-}
-
+  );
+};
 
 export default Navbar;

@@ -10,6 +10,7 @@ import LanguagesAndTools from "./Components/Sections/LanguagesAndTools";
 import Contact from "./Components/Sections/Contact";
 import TopButton from "./Components/Sections/ToTopButton";
 import "./App.css";
+import Experience from "./Components/Sections/Experience";
 
 function App() {
   const [isDark, setIsDark] = React.useState(false);
@@ -46,6 +47,12 @@ function App() {
       <div id="languages">
         <LanguagesAndTools />
       </div>
+
+      <Fade duration={800} bottom={true}>
+        <div id="exp">
+          <Experience />
+        </div>
+      </Fade>
 
       <Fade duration={800} bottom={true}>
         <div id="edu">

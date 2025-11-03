@@ -34,7 +34,7 @@ const AboutMe = () => {
           <p style={{ textAlign: "left", alignItems: "right" }}>
             <p>
               My name is Charalampos Piotopoulos, I am {getAge()} years old,
-              from Greece and I study Computer Science at the Technical
+              from Greece and I study MSc. Computer Science at the Technical
               University of Munich (TUM).{" "}
             </p>
             <p>
