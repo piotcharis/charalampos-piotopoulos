@@ -5,7 +5,7 @@ import "../../App.css";
 
 function Experience() {
   return (
-    <div className="divEdu">
+    <div className="divExp">
       <h1 className="title">Experience</h1>
       <Timeline>
         <Fade delay={50} bottom={true}>
@@ -13,6 +13,7 @@ function Experience() {
             interval={"Nov 2025 - present"}
             title={"Koinon / TU Munich"}
             subtitle={"Software Engineer - Part-time"}
+            style={{ maxWidth: "205ch" }}
           >
             Contributing to TUM's central platform for teaching management. My
             role focuses on developing, maintaining, and optimizing features
