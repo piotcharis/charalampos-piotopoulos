@@ -13,12 +13,13 @@ function Experience() {
             interval={"Nov 2025 - present"}
             title={"Koinon / TU Munich"}
             subtitle={"Software Engineer - Part-time"}
-            style={{ maxWidth: "205ch" }}
           >
-            Contributing to TUM's central platform for teaching management. My
-            role focuses on developing, maintaining, and optimizing features
-            within an existing PHP / jQuery framework that supports teaching and
-            administrative processes across the university.
+            <div style={{ maxWidth: "205ch" }}>
+              Contributing to TUM's central platform for teaching management. My
+              role focuses on developing, maintaining, and optimizing features
+              within an existing PHP / jQuery framework that supports teaching
+              and administrative processes across the university.
+            </div>
           </Event>
         </Fade>
       </Timeline>
