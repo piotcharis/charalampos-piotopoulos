@@ -5,26 +5,26 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
 
-    - name: Use Node.js 16
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
-      
-    - name: 🔨 Build Project
-      run: |
-        yarn install
-        npm run build
-    
-    - name: List output files
-      run: find build/
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: charalampos-piotopoulos.com
-        username: u698006961.charalampos-piotopoulos.com
-        password: ${{ secrets.FTP_SECRET }}
-        local-dir: build/
+      - name: Use Node.js 18.12.0
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18.12.0"
+
+      - name: 🔨 Build Project
+        run: |
+          yarn install
+          npm run build
+
+      - name: List output files
+        run: find build/
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: charalampos-piotopoulos.com
+          username: u698006961.charalampos-piotopoulos.com
+          password: ${{ secrets.FTP_SECRET }}
+          local-dir: build/
