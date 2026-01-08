@@ -190,6 +190,10 @@
   cursor: pointer;
 }
 
+.contactSubmit:hover {
+  background-color: #1e3c73;
+}
+
 .topButtonImg {
   width: 30px;
   height: 30px;

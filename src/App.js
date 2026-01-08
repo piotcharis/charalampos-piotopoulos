@@ -38,7 +38,7 @@ function App() {
       <div
         style={{
           height: "100vh",
-          background: isDark ? "#232C33" : "#606060",
+          background: isDark ? "#232C33" : "#1e3c73",
         }}
       >
         <Home isDark={isDark} />
