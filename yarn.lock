@@ -10971,13 +10971,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "picocolors@npm:0.2.1"
-  checksum: 10c0/98a83c77912c80aea0fc518aec184768501bfceafa490714b0f43eda9c52e372b844ce0a591e822bbfe5df16dcf366be7cbdb9534d39cf54a80796340371ee17
-  languageName: node
-  linkType: hard
-
 "picocolors@npm:^1.0.0, picocolors@npm:^1.1.1":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
@@ -11380,7 +11373,7 @@ __metadata:
     klona: "npm:^2.0.5"
     semver: "npm:^7.3.5"
   peerDependencies:
-    postcss: ^7.0.0 || ^8.0.1
+    postcss: ^8.0.1
     webpack: ^5.0.0
   checksum: 10c0/736a1bf43a3e09e2351b5cc97cc26790a1c3261412c9dee063f3f6f2969a6ff7d8d194d9adcad01cee1afd1de071482318d9699e6157b67d46b3dccf3be1b58b
   languageName: node
@@ -11884,7 +11877,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.33, postcss@npm:^8.4.4, postcss@npm:^8.4.47, postcss@npm:^8.5.6":
+"postcss@npm:^8.0.31, postcss@npm:^8.3.5, postcss@npm:^8.4.33, postcss@npm:^8.4.4, postcss@npm:^8.4.47, postcss@npm:^8.5.6":
   version: 8.5.6
   resolution: "postcss@npm:8.5.6"
   dependencies:
@@ -12761,7 +12754,7 @@ __metadata:
     adjust-sourcemap-loader: "npm:^4.0.0"
     convert-source-map: "npm:^1.7.0"
     loader-utils: "npm:^2.0.0"
-    postcss: "npm:^7.0.35"
+    postcss: "npm:^8.0.31"
     source-map: "npm:0.6.1"
   peerDependencies:
     rework: 1.0.1
