@@ -1,16 +1,17 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import NavBar from "./Components/Navbar";
 import ModeButton from "./Components/ModeButton";
 import Home from "./Components/Sections/Home";
 import AboutMe from "./Components/Sections/AboutMe";
 import Education from "./Components/Sections/Education";
+import Certificates from "./Components/Sections/Certificates";
 import Projects from "./Components/Sections/Projects";
 import LanguagesAndTools from "./Components/Sections/LanguagesAndTools";
 import Contact from "./Components/Sections/Contact";
 import TopButton from "./Components/Sections/ToTopButton";
-import "./App.css";
 import Experience from "./Components/Sections/Experience";
+import "./App.css";
 
 function App() {
   const [isDark, setIsDark] = React.useState(false);
@@ -35,7 +36,10 @@ function App() {
       </div>
 
       <div
-        style={{ height: "100vh", background: isDark ? "#232C33" : "#606060" }}
+        style={{
+          height: "100vh",
+          background: isDark ? "#232C33" : "#606060",
+        }}
       >
         <Home isDark={isDark} />
       </div>
@@ -48,20 +52,24 @@ function App() {
         <LanguagesAndTools />
       </div>
 
-      <Fade duration={800} bottom={true}>
+      <Fade direction="up" duration={800} triggerOnce>
         <div id="exp">
-          <Experience />
+          <Experience isDark={isDark} />
         </div>
       </Fade>
 
-      <Fade duration={800} bottom={true}>
+      <Fade direction="up" duration={800} triggerOnce>
         <div id="edu">
-          <Education />
+          <Education isDark={isDark} />
         </div>
       </Fade>
+
+      <div id="certificates">
+        <Certificates isDark={isDark} />
+      </div>
 
       <div id="projects">
-        <Projects />
+        <Projects isDark={isDark} />
       </div>
 
       <div id="contact">

@@ -90,6 +90,7 @@ const Menu = ({ open }) => {
       <a href="#aboutMe">/About me</a>
       <a href="#exp">/Experience</a>
       <a href="#edu">/Education</a>
+      <a href="#certificates">/Certificates</a>
       <a href="#projects">/Projects</a>
       <a href="#languages">/Languages and Tools</a>
       <a href="#contact">/Contact</a>

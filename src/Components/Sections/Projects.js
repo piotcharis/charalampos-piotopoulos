@@ -1,9 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../../App.css";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, ...props }) {
   return (
-    <div className="project-card">
+    <div
+      className="project-card"
+      style={{
+        backgroundColor: props.isDark ? "#2C3E50" : "#F5F5F5",
+      }}
+    >
       <img
         src={project.image}
         alt={project.title}
@@ -30,6 +36,15 @@ function ProjectCard({ project }) {
     </div>
   );
 }
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    image: PropTypes.any,
+    githubRepo: PropTypes.string,
+  }),
+};
 
 const projects = [
   {
@@ -83,13 +98,13 @@ const projects = [
   },
 ];
 
-function Projects() {
+function Projects(props) {
   return (
     <div className="divProjects">
       <h1 className="title">Projects</h1>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} project={project} isDark={props.isDark} />
         ))}
       </div>
     </div>

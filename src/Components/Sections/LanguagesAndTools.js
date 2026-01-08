@@ -4,6 +4,7 @@ import Tooltip from "react-bootstrap/Tooltip";
 import "../../App.css";
 import Postman from "./resources/postman-icon.svg";
 import PostmanCert from "./resources/postman-cert.png";
+import PMCert from "./resources/pm-cert.png";
 
 const styleIcon = {
   width: window.innerWidth > 1500 ? 80 : 60,
@@ -315,6 +316,20 @@ const LanguagesAndTools = () => {
               alt="Postman Certification"
               style={styleIcon}
             />
+          </a>
+        </OverlayTrigger>
+
+        <OverlayTrigger
+          placement="right"
+          delay={{ show: 250, hide: 400 }}
+          overlay={
+            <Tooltip id="postman-cert">
+              Google Project Manager Professional Certificate
+            </Tooltip>
+          }
+        >
+          <a href="https://www.coursera.org/account/accomplishments/specialization/VVQ12UZCE1KX">
+            <img src={PMCert} alt="Google PM Certification" style={styleIcon} />
           </a>
         </OverlayTrigger>
       </p>

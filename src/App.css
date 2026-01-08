@@ -210,13 +210,13 @@
 }
 
 .project-card:hover {
-  background-color: #ebebeb;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-card__image {
   border-radius: 10px;
   margin-bottom: 20px;
-  max-width: 100%;
 }
 
 .project-card__title {
@@ -243,8 +243,61 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.45fr));
   grid-auto-rows: minmax(200px, auto);
   grid-gap: 30px;
   padding: 0 30px;
+  justify-content: center;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 40px 0;
+  border-left: 3px solid #ccc;
+  padding-left: 20px;
+  margin-left: 20px;
+  max-width: 1636px;
+}
+
+.timeline-event {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 5px;
+  left: -29px;
+  width: 15px;
+  height: 15px;
+  background-color: #333;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.timeline-interval {
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.timeline-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.timeline-subtitle {
+  margin: 5px 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.timeline-body {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  width: 70%;
 }
