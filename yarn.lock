@@ -2859,6 +2859,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@remix-run/router@npm:1.23.0":
+  version: 1.23.0
+  resolution: "@remix-run/router@npm:1.23.0"
+  checksum: 10c0/eaef5cb46a1e413f7d1019a75990808307e08e53a39d4cf69c339432ddc03143d725decef3d6b9b5071b898da07f72a4a57c4e73f787005fcf10162973d8d7d7
+  languageName: node
+  linkType: hard
+
 "@remix-run/router@npm:1.23.2":
   version: 1.23.2
   resolution: "@remix-run/router@npm:1.23.2"
