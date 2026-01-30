@@ -1,23 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DF4G7EYG5P"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DF4G7EYG5P"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-DF4G7EYG5P');
+      gtag("config", "G-DF4G7EYG5P");
     </script>
     <meta charset="utf-8" />
     <link rel="icon" href="./resources/hacker.png" />
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Rubik">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik"
+    />
     <link rel="stylesheet" href="style.css" />
     <style>
       body {
-        font-family: 'Rubik', sans-serif;
+        font-family: "Rubik", sans-serif;
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -45,9 +52,9 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/src/index.tsx"></script>
 
     <div id="root"></div>
 
+    <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>
