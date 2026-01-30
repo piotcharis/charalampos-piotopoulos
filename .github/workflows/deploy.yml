@@ -35,4 +35,6 @@ jobs:
           username: u698006961.charalampos-piotopoulos.com
           password: ${{ secrets.FTP_SECRET }}
           local-dir: build/
+          exclude: |
+            **/static/**
           dangerous-clean-slate: false
