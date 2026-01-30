@@ -1,5 +1,27 @@
 import React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+
+export const useOnClickOutside = (ref, handler) => {
+  useEffect(() => {
+    const listener = (event) => {
+      // If the reference hasn't been defined or the click is INSIDE the ref, do nothing
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      // Otherwise, call the handler (which will be setOpen(false))
+      handler(event);
+    };
+
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, handler]);
+};
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -45,9 +67,6 @@ const StyledBurger = styled.button`
   position: absolute;
   top: 5%;
   left: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   width: 2rem;
   height: 2rem;
   background: transparent;
@@ -61,26 +80,36 @@ const StyledBurger = styled.button`
   }
 
   div {
+    position: absolute;
+    left: 0;
+    top: 50%;
     width: 2rem;
     height: 0.25rem;
     background: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
     border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
+    transition:
+      transform 0.35s ease,
+      opacity 0.25s ease;
+    transform-origin: center;
+  }
 
-    :first-child {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
-    }
+  div:nth-child(1) {
+    transform: ${({ open }) =>
+      open
+        ? "translateY(-50%) rotate(45deg)"
+        : "translateY(calc(-50% - 0.5rem))"};
+  }
 
-    :nth-child(2) {
-      opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
-    }
+  div:nth-child(2) {
+    opacity: ${({ open }) => (open ? 0 : 1)};
+    transform: translateY(-50%);
+  }
 
-    :nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
-    }
+  div:nth-child(3) {
+    transform: ${({ open }) =>
+      open
+        ? "translateY(-50%) rotate(-45deg)"
+        : "translateY(calc(-50% + 0.5rem))"};
   }
 `;
 
@@ -111,6 +140,9 @@ const Burger = ({ open, setOpen }) => {
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
+
+  useOnClickOutside(node, () => setOpen(false));
+
   return (
     <div>
       <div ref={node}>

@@ -24,7 +24,7 @@ const AboutMe = () => {
           <img
             src={astronautImg}
             alt="astronaut"
-            style={{ width: "100%", maxWidth: "250px", height: "auto" }}
+            style={{ width: "100%", maxWidth: "200px", height: "auto" }}
           />
         </Col>
         <Col>
