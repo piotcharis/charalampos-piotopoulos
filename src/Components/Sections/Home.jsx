@@ -9,7 +9,7 @@ import "../../App.css";
 const buttonStyle = {
   border: "transparent",
   background: "transparent",
-  width: 70,
+  width: 60,
   margin: "0 5px",
   cursor: "pointer",
 };
@@ -79,6 +79,7 @@ const Home = (props) => {
               <img
                 src="https://img.icons8.com/dotty/80/null/resume.png"
                 alt="CV"
+                style={{ width: "60px" }}
               />
             </button>
           </a>
