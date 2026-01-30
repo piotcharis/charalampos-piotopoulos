@@ -26,7 +26,7 @@ jobs:
           yarn build
 
       - name: List output files
-        run: find build/
+        run: find dist/
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -34,4 +34,4 @@ jobs:
           server: charalampos-piotopoulos.com
           username: u698006961.charalampos-piotopoulos.com
           password: ${{ secrets.FTP_SECRET }}
-          local-dir: dist/
+          local-dir: build/
