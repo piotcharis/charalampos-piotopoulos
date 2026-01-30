@@ -26,7 +26,7 @@ jobs:
           yarn build
 
       - name: List output files
-        run: find dist/
+        run: find build/
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
