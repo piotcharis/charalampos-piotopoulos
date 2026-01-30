@@ -2,26 +2,31 @@ on: push
 name: 🚀 Deploy website on push
 permissions:
   contents: read
+
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Use Node.js 18.12.0
-        uses: actions/setup-node@v2
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
         with:
-          node-version: "18.12.0"
+          node-version: "22"
+          cache: "yarn"
 
       - name: 🔨 Build Project
         run: |
-          yarn install
-          npm run build
+          yarn install --immutable
+          yarn build
 
       - name: List output files
-        run: find build/
+        run: find dist/
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -29,4 +34,4 @@ jobs:
           server: charalampos-piotopoulos.com
           username: u698006961.charalampos-piotopoulos.com
           password: ${{ secrets.FTP_SECRET }}
-          local-dir: build/
+          local-dir: dist/
