@@ -1,5 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import websiteImg from "./resources/website-dark.png";
+import thesisImg from "./resources/thesis_title.png";
+import ioctImg from "./resources/prediction.png";
+import questImg from "./resources/questionnaire.png";
+import mandelbrotImg from "./resources/mandelbrot.png";
+import peanoImg from "./resources/peano.png";
+import searchImg from "./resources/search-engine.png";
+import hatsImg from "./resources/top-of-the-hats.png";
 import "../../App.css";
 
 function ProjectCard({ project, ...props }) {
@@ -24,6 +32,7 @@ function ProjectCard({ project, ...props }) {
               border: "transparent",
               background: "transparent",
               width: "4rem",
+              cursor: "pointer",
             }}
           >
             <img
@@ -50,50 +59,50 @@ const projects = [
   {
     title: "This website",
     description: "This website was created using React.js, HTML and CSS.",
-    image: require("./resources/website-dark.png"),
+    image: websiteImg,
     githubRepo: "https://github.com/piotcharis/personal_site",
   },
   {
     title: "Bachelor Thesis",
     description: "This program was created using Python.",
-    image: require("./resources/thesis_title.png"),
+    image: thesisImg,
     githubRepo: "https://github.com/piotcharis/Bachelor_Thesis",
   },
   {
     title: "Neural Network for iOCT Image Segmentation",
     description: "This program was created using Python.",
-    image: require("./resources/prediction.png"),
+    image: ioctImg,
     githubRepo:
       "https://github.com/piotcharis/Neural_Network_iOCT_Image_Segmentation",
   },
   {
     title: "Custom Questionnaire",
     description: "This program was created using PHP and Javascript.",
-    image: require("./resources/questionnaire.png"),
+    image: questImg,
     githubRepo: "https://github.com/piotcharis/Questionnaire",
   },
   {
     title: "Mandelbrot set",
     description: "This program was created using C.",
-    image: require("./resources/mandelbrot.png"),
+    image: mandelbrotImg,
     githubRepo: "https://github.com/piotcharis/Mandelbrot",
   },
   {
     title: "Peano Curve",
     description: "This program was created using C.",
-    image: require("./resources/peano.png"),
+    image: peanoImg,
     githubRepo: "https://github.com/piotcharis/PeanoCurve",
   },
   {
     title: "Pingu Search Engine",
     description: "This app was created using Java.",
-    image: require("./resources/search-engine.png"),
+    image: searchImg,
     githubRepo: "https://github.com/piotcharis/SearchEnginePGdP",
   },
   {
     title: "Top of the hats",
     description: "This program was created using Java and Java Swing.",
-    image: require("./resources/top-of-the-hats.png"),
+    image: hatsImg,
     githubRepo: "https://github.com/piotcharis/TopOfTheHats",
   },
 ];

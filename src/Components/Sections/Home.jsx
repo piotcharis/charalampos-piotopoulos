@@ -1,14 +1,17 @@
 import React from "react";
-import "../../App.css";
 import CV from "./resources/Charalampos_Piotopoulos.pdf";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import arrowWhite from "./resources/arrow-down-white.png";
+import arrowBlack from "./resources/arrow-down.png";
+import "../../App.css";
 
 const buttonStyle = {
   border: "transparent",
   background: "transparent",
   width: 70,
-  padding: 10,
+  margin: "0 5px",
+  cursor: "pointer",
 };
 
 const Home = (props) => {
@@ -76,7 +79,6 @@ const Home = (props) => {
               <img
                 src="https://img.icons8.com/dotty/80/null/resume.png"
                 alt="CV"
-                style={{ width: 60, height: 60 }}
               />
             </button>
           </a>
@@ -85,10 +87,8 @@ const Home = (props) => {
 
       <a href="#aboutMe" style={{ zIndex: "1" }}>
         <img
-          src={require(props.isDark
-            ? "./resources/arrow-down-white.png"
-            : "./resources/arrow-down.png")}
-          style={{ width: 40, height: 140, paddingTop: 100 }}
+          src={props.isDark ? arrowWhite : arrowBlack}
+          style={{ width: 40, paddingTop: 100 }}
           alt="arrow down"
         />
       </a>

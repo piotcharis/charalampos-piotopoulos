@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import "../../App.css";
 import Postman from "./resources/postman-icon.svg";
 import PostmanCert from "./resources/postman-cert.png";
 import PMCert from "./resources/pm-cert.png";
-
-const styleIcon = {
-  width: window.innerWidth > 1500 ? 80 : 60,
-  height: window.innerWidth > 1500 ? 85 : 65,
-  padding: 10,
-};
+import "../../App.css";
 
 const LanguagesAndTools = () => {
+  const [isLarge, setIsLarge] = useState(window.innerWidth > 1500);
+
+  useEffect(() => {
+    const handleResize = () => setIsLarge(window.innerWidth > 1500);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const currentStyle = {
+    width: isLarge ? 80 : 60,
+    height: isLarge ? 85 : 65,
+    padding: 10,
+    cursor: "pointer",
+  };
+
   return (
     <div className="mainStyle">
       <h1 className="title">Languages and Tools</h1>
@@ -26,7 +35,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://user-images.githubusercontent.com/79626497/189351129-c95e19fc-68c8-480c-8b9b-76091299ed45.png"
               alt="Java"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -40,7 +49,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://user-images.githubusercontent.com/79626497/189351660-35d2acec-dade-4ea4-802b-750843c30f11.png"
               alt="C"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -54,7 +63,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://www.vectorlogo.zone/logos/isocpp/isocpp-icon.svg"
               alt="C++"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -68,7 +77,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
               alt="Python"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -82,7 +91,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
               alt="PHP"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -97,9 +106,10 @@ const LanguagesAndTools = () => {
               src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg"
               alt="Pytorch"
               style={{
-                width: 140,
-                height: window.innerWidth > 1500 ? 85 : 65,
+                width: isLarge ? 140 : 100,
+                height: isLarge ? 85 : 65,
                 padding: 10,
+                cursor: "pointer",
               }}
             />
           </a>
@@ -115,9 +125,10 @@ const LanguagesAndTools = () => {
               src="https://user-images.githubusercontent.com/79626497/189353214-f5308df0-abb6-4ccf-8643-ba8cfbc05b9c.png"
               alt="Assembly"
               style={{
-                width: window.innerWidth > 1500 ? 95 : 75,
-                height: window.innerWidth > 1500 ? 90 : 70,
+                width: isLarge ? 90 : 70,
+                height: isLarge ? 85 : 65,
                 padding: 10,
+                cursor: "pointer",
               }}
             />
           </a>
@@ -132,7 +143,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://user-images.githubusercontent.com/79626497/189353441-10a738f5-917b-4584-aa73-24521208351d.png"
               alt="Ocaml"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -146,7 +157,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
               alt="React"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -160,7 +171,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
               alt="JavaScript"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -174,7 +185,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg"
               alt="Node.js"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -188,7 +199,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
               alt="HTML"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -202,7 +213,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
               alt="MySQL"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -216,7 +227,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg"
               alt="LaTeX"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -230,7 +241,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
               alt="Markdown"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -244,7 +255,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
               alt="Docker"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -258,7 +269,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
               alt="Git"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -272,7 +283,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
               alt="Gradle"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -286,7 +297,7 @@ const LanguagesAndTools = () => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
               alt="Spring"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -297,7 +308,7 @@ const LanguagesAndTools = () => {
           overlay={<Tooltip id="postman">Postman</Tooltip>}
         >
           <a href="https://www.postman.com/">
-            <img src={Postman} alt="Postman" style={styleIcon} />
+            <img src={Postman} alt="Postman" style={currentStyle} />
           </a>
         </OverlayTrigger>
 
@@ -314,7 +325,7 @@ const LanguagesAndTools = () => {
             <img
               src={PostmanCert}
               alt="Postman Certification"
-              style={styleIcon}
+              style={currentStyle}
             />
           </a>
         </OverlayTrigger>
@@ -329,7 +340,11 @@ const LanguagesAndTools = () => {
           }
         >
           <a href="https://www.coursera.org/account/accomplishments/specialization/VVQ12UZCE1KX">
-            <img src={PMCert} alt="Google PM Certification" style={styleIcon} />
+            <img
+              src={PMCert}
+              alt="Google PM Certification"
+              style={currentStyle}
+            />
           </a>
         </OverlayTrigger>
       </p>

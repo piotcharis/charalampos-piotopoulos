@@ -1,18 +1,18 @@
 import React from "react";
 import "../../App.css";
 
-export const Timeline = ({ children, ...props }) => {
+export const Timeline = ({ children, isDark }) => {
   return (
     <div
       className="timeline-container"
-      style={{ color: props.isDark ? "#F5F5F5" : "#232c33" }}
+      style={{ color: isDark ? "#F5F5F5" : "#232c33" }}
     >
       {children}
     </div>
   );
 };
 
-export const Event = ({ title, subtitle, interval, children, ...props }) => {
+export const Event = ({ title, subtitle, interval, children}) => {
   return (
     <div className="timeline-event">
       <div className="timeline-marker"></div>

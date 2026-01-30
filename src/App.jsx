@@ -11,6 +11,7 @@ import LanguagesAndTools from "./Components/Sections/LanguagesAndTools";
 import Contact from "./Components/Sections/Contact";
 import TopButton from "./Components/Sections/ToTopButton";
 import Experience from "./Components/Sections/Experience";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {

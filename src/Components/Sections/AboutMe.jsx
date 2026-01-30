@@ -1,6 +1,7 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import astronautImg from "./resources/astronaut-standing.png";
 import "../../App.css";
 
 function getAge() {
@@ -21,9 +22,9 @@ const AboutMe = () => {
       <Row xs={1} md={2} className="g-4">
         <Col style={{ textAlign: "center", margin: "auto" }}>
           <img
-            src={require("./resources/astronaut-standing.png")}
+            src={astronautImg}
             alt="astronaut"
-            style={{ width: "25%", height: "auto" }}
+            style={{ width: "100%", maxWidth: "250px", height: "auto" }}
           />
         </Col>
         <Col>

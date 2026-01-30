@@ -1,5 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import pmCertImg from "./resources/pm-cert-pdf.jpg";
+import cs50Img from "./resources/CS50.jpg";
+import learnCImg from "./resources/learn_c.png";
+import learnPythonImg from "./resources/learn_python.png";
 import "../../App.css";
 
 function ProjectCard({ certificate, ...props }) {
@@ -24,6 +28,7 @@ function ProjectCard({ certificate, ...props }) {
               border: "transparent",
               background: "transparent",
               width: "4rem",
+              cursor: "pointer",
             }}
           >
             <svg
@@ -59,26 +64,26 @@ const certificates = [
     title: "Google Project Manager Professional Certificate",
     description:
       "Those who earn the Google Project Management Certificate have completed seven courses, developed by Google, that include handson, practice-based assessments and are designed to prepare them for introductory-level roles in Project Management. They are competent in initiating, planning and running both traditional and agile projects.",
-    image: require("./resources/pm-cert-pdf.jpg"),
+    image: pmCertImg,
     link: "https://www.coursera.org/account/accomplishments/specialization/VVQ12UZCE1KX",
   },
   {
     title: "Harvard CS50 Certificate",
     description:
       "CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming",
-    image: require("./resources/CS50.jpg"),
+    image: cs50Img,
     link: "https://cs50.harvard.edu/certificates/d2d30217-c980-494d-a151-02141b317b04",
   },
   {
     title: "Codecademy Learn C Certificate",
     description: "Learned about the C programming language",
-    image: require("./resources/learn_c.png"),
+    image: learnCImg,
     link: "https://www.codecademy.com/profiles/charispiot/certificates/8c3029c4a6e5894e74da756e3a7c0ae3",
   },
   {
     title: "Codecademy Learn Python 3 Certificate",
     description: "Learned about the Python programming language",
-    image: require("./resources/learn_python.png"),
+    image: learnPythonImg,
     link: "https://www.codecademy.com/profiles/charispiot/certificates/6c152bd262967f8c941c9707ed636bda",
   },
 ];
