@@ -1,4 +1,12 @@
 module.exports = {
+  eslint: {
+    configure: (eslintConfig) => {
+      // Remove options deprecated in ESLint 9.x
+      delete eslintConfig.extensions;
+      delete eslintConfig.resolvePluginsRelativeTo;
+      return eslintConfig;
+    },
+  },
   devServer: (devServerConfig) => {
     // Remove deprecated v3 options
     const deprecatedOptions = [
