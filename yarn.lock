@@ -1890,7 +1890,7 @@ __metadata:
     lint-staged: "npm:^15.2.10"
     node-fetch: "npm:^3.3.2"
     on-headers: "npm:^1.1.0"
-    path-to-regexp: "npm:8.1.0"
+    path-to-regexp: "npm:8.4.0"
     postcss: "npm:^8.5.6"
     prettier: "npm:^3.3.3"
     prop-types: "npm:^15.8.1"
@@ -4134,10 +4134,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-to-regexp@npm:8.1.0":
-  version: 8.1.0
-  resolution: "path-to-regexp@npm:8.1.0"
-  checksum: 10c0/1c46be3806ab081bedc51eb238fcb026b61b15f19e8924b26e7dad88812dda499efe357a780665dc915dcab3be67213f145f5e2921b8fc8c6c497608d4e092ed
+"path-to-regexp@npm:8.4.0":
+  version: 8.4.0
+  resolution: "path-to-regexp@npm:8.4.0"
+  checksum: 10c0/171a540aed2a5dff3da6e7584f263ae65d868daea382ea3bd1ddeb828912661133d5a94fce83bd3125f0799df8dfd4924b270e2987a31930901cfd94ae164b45
   languageName: node
   linkType: hard
 
