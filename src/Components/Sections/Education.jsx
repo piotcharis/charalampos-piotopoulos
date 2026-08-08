@@ -6,7 +6,7 @@ function Education(props) {
   return (
     <div className="divEdu">
       <h1 className="title">Education</h1>
-      <Timeline isDark={props.isDark}>
+      <Timeline isDark={props.isDark} style={{ width: "stretch" }}>
         <Fade delay={50} direction="up" triggerOnce>
           <div>
             <Event
