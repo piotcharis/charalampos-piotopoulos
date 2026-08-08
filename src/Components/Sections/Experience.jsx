@@ -10,7 +10,7 @@ function Experience(props) {
         <Fade delay={50} direction="up" triggerOnce>
           <div>
             <Event
-              interval={"Nov 2025 - present"}
+              interval={"2025 - present"}
               title={"Koinon / TU Munich"}
               subtitle={"Software Engineer - Part-time"}
             >

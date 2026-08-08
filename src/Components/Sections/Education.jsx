@@ -10,7 +10,7 @@ function Education(props) {
         <Fade delay={50} direction="up" triggerOnce>
           <div>
             <Event
-              interval={"2025 - present"}
+              interval={"Present"}
               title={"Technical University of Munich (TUM)"}
               subtitle={"Computer Science (Master of Science)"}
             ></Event>
@@ -19,7 +19,6 @@ function Education(props) {
         <Fade delay={100} direction="up" triggerOnce>
           <div>
             <Event
-              interval={"2021 - 2025"}
               title={"Technical University of Munich (TUM)"}
               subtitle={"Computer Science (Bachelor of Science)"}
             >
@@ -27,7 +26,7 @@ function Education(props) {
             </Event>
           </div>
         </Fade>
-        <Fade delay={150} direction="up" triggerOnce>
+        {/* <Fade delay={150} direction="up" triggerOnce>
           <div>
             <Event
               interval={"2018 - 2021"}
@@ -40,16 +39,13 @@ function Education(props) {
               Psychology, Sociology and Clinical Medicine.
             </Event>
           </div>
-        </Fade>
+        </Fade> */}
         <Fade delay={200} direction="up" triggerOnce>
           <div>
             <Event
-              interval={"2012 - 2018"}
               title={"German School of Athens (DSA)"}
               subtitle={"Allgemeine Hochschulreife (Abitur)"}
-            >
-              Grade: 1.2
-            </Event>
+            ></Event>
           </div>
         </Fade>
       </Timeline>
