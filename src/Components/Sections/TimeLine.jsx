@@ -5,14 +5,14 @@ export const Timeline = ({ children, isDark }) => {
   return (
     <div
       className="timeline-container"
-      style={{ color: isDark ? "#F5F5F5" : "#232c33" }}
+      style={{ color: isDark ? "#F5F5F5" : "#232c33", width: "stretch" }}
     >
       {children}
     </div>
   );
 };
 
-export const Event = ({ title, subtitle, interval, children}) => {
+export const Event = ({ title, subtitle, interval, children }) => {
   return (
     <div className="timeline-event">
       <div className="timeline-marker"></div>
