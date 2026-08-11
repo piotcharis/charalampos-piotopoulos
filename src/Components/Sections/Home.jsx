@@ -1,12 +1,14 @@
-import React from "react";
+import PropTypes from "prop-types";
 import CV from "./resources/Charalampos_Piotopoulos.pdf";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import arrowWhite from "./resources/arrow-down-white.png";
 import arrowBlack from "./resources/arrow-down.png";
+import HeroBackground from "./HeroBackground";
 import "../../App.css";
 
-const buttonStyle = {
+const linkStyle = {
+  display: "inline-block",
   border: "transparent",
   background: "transparent",
   width: 60,
@@ -17,6 +19,7 @@ const buttonStyle = {
 const Home = (props) => {
   return (
     <div className="divHome">
+      <HeroBackground />
       <h1 className="title" style={{ color: "white", zIndex: "1" }}>
         Charalampos Piotopoulos
       </h1>
@@ -41,13 +44,17 @@ const Home = (props) => {
           delay={{ show: 250, hide: 400 }}
           overlay={<Tooltip id="linkedin">LinkedIn</Tooltip>}
         >
-          <a href="https://www.linkedin.com/in/charis-piotopoulos/">
-            <button style={buttonStyle}>
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                alt="LinkedIn"
-              />
-            </button>
+          <a
+            href="https://www.linkedin.com/in/charis-piotopoulos/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            style={linkStyle}
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+              alt="LinkedIn"
+            />
           </a>
         </OverlayTrigger>
         <OverlayTrigger
@@ -55,13 +62,17 @@ const Home = (props) => {
           delay={{ show: 250, hide: 400 }}
           overlay={<Tooltip id="github">GitHub</Tooltip>}
         >
-          <a href="https://github.com/piotcharis/">
-            <button style={buttonStyle}>
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                alt="GitHub"
-              />
-            </button>
+          <a
+            href="https://github.com/piotcharis/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            style={linkStyle}
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+            />
           </a>
         </OverlayTrigger>
         <OverlayTrigger
@@ -74,19 +85,19 @@ const Home = (props) => {
             download="Charalampos_Piotopoulos"
             target="_blank"
             rel="noreferrer"
+            aria-label="Download CV"
+            style={linkStyle}
           >
-            <button style={buttonStyle}>
-              <img
-                src="https://img.icons8.com/dotty/80/null/resume.png"
-                alt="CV"
-                style={{ width: "60px" }}
-              />
-            </button>
+            <img
+              src="https://img.icons8.com/dotty/80/null/resume.png"
+              alt="CV"
+              style={{ width: "60px" }}
+            />
           </a>
         </OverlayTrigger>
       </div>
 
-      <a href="#aboutMe" style={{ zIndex: "1" }}>
+      <a href="#aboutMe" style={{ zIndex: "1" }} aria-label="Scroll to About me">
         <img
           src={props.isDark ? arrowWhite : arrowBlack}
           style={{ width: 40, paddingTop: 100 }}
@@ -95,6 +106,10 @@ const Home = (props) => {
       </a>
     </div>
   );
+};
+
+Home.propTypes = {
+  isDark: PropTypes.bool,
 };
 
 export default Home;

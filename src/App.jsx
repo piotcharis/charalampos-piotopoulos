@@ -18,8 +18,10 @@ function App() {
   const [isDark, setIsDark] = React.useState(false);
 
   const style = {
-    backgroundColor: isDark ? "#232C33" : "#FFFFFF",
-    color: isDark ? "#F5F5F5" : "#232C33",
+    backgroundColor: isDark
+      ? "var(--color-bg-dark)"
+      : "var(--color-bg-light)",
+    color: isDark ? "var(--color-text-dark)" : "var(--color-text-light)",
   };
 
   return (
@@ -40,7 +42,9 @@ function App() {
       <div
         style={{
           height: "100vh",
-          background: isDark ? "#232C33" : "#1e3c73",
+          background: isDark
+            ? "var(--color-hero-bg-dark)"
+            : "var(--color-hero-bg-light)",
         }}
       >
         <Home isDark={isDark} />

@@ -1,16 +1,17 @@
-import React from "react";
 import PropTypes from "prop-types";
 import "../App.css";
 
 function Card({ title, description, image, link, linkLabel, isDark, icon }) {
   return (
     <div
-      className="project-card"
-      style={{
-        backgroundColor: isDark ? "#2C3E50" : "#F5F5F5",
-      }}
+      className={`project-card${isDark ? " project-card--dark" : ""}`}
     >
-      <img src={image} alt={title} className="project-card__image" />
+      <img
+        src={image}
+        alt={title}
+        className="project-card__image"
+        loading="lazy"
+      />
       <h3 className="project-card__title">{title}</h3>
       <p className="project-card__description">{description}</p>
       <div className="project-card__links">

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Fade } from "react-awesome-reveal";
 import { Timeline, Event } from "./TimeLine";
 import "../../App.css";
@@ -31,5 +32,9 @@ function Experience(props) {
     </div>
   );
 }
+
+Experience.propTypes = {
+  isDark: PropTypes.bool,
+};
 
 export default Experience;

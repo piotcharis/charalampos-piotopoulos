@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 

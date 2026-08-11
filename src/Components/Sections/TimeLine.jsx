@@ -1,15 +1,20 @@
-import React from "react";
+import PropTypes from "prop-types";
 import "../../App.css";
 
 export const Timeline = ({ children, isDark }) => {
   return (
     <div
-      className="timeline-container"
-      style={{ color: isDark ? "#F5F5F5" : "#232c33", width: "stretch" }}
+      className={`timeline-container ${isDark ? "theme-text--dark" : "theme-text--light"}`}
+      style={{ width: "stretch" }}
     >
       {children}
     </div>
   );
+};
+
+Timeline.propTypes = {
+  children: PropTypes.node,
+  isDark: PropTypes.bool,
 };
 
 export const Event = ({ title, subtitle, interval, children }) => {
@@ -24,4 +29,11 @@ export const Event = ({ title, subtitle, interval, children }) => {
       </div>
     </div>
   );
+};
+
+Event.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  interval: PropTypes.string,
+  children: PropTypes.node,
 };

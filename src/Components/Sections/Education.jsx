@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Fade } from "react-awesome-reveal";
 import { Timeline, Event } from "./TimeLine";
 import "../../App.css";
@@ -52,5 +53,9 @@ function Education(props) {
     </div>
   );
 }
+
+Education.propTypes = {
+  isDark: PropTypes.bool,
+};
 
 export default Education;

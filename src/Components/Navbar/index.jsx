@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
-import { useEffect } from "react";
 
 export const useOnClickOutside = (ref, handler) => {
   useEffect(() => {
@@ -129,12 +129,25 @@ const Menu = ({ open }) => {
 
 const Burger = ({ open, setOpen }) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger
+      open={open}
+      onClick={() => setOpen(!open)}
+      aria-label={open ? "Close menu" : "Open menu"}
+    >
       <div />
       <div />
       <div />
     </StyledBurger>
   );
+};
+
+Menu.propTypes = {
+  open: PropTypes.bool,
+};
+
+Burger.propTypes = {
+  open: PropTypes.bool,
+  setOpen: PropTypes.func.isRequired,
 };
 
 const Navbar = () => {

@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import { Fade } from "react-awesome-reveal";
 import Card from "../Card";
 import websiteImg from "./resources/website-dark.png";
 import thesisImg from "./resources/thesis_title.png";
@@ -82,18 +82,20 @@ function Projects({ isDark }) {
     <div className="divProjects">
       <h1 className="title">Projects</h1>
       <div className="projects-grid">
-        {projects.map((project) => (
-          <Card
-            key={project.githubRepo}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            link={project.githubRepo}
-            linkLabel={`View ${project.title} on GitHub`}
-            isDark={isDark}
-            icon={githubIcon}
-          />
-        ))}
+        <Fade cascade damping={0.1} direction="up" triggerOnce>
+          {projects.map((project) => (
+            <Card
+              key={project.githubRepo}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              link={project.githubRepo}
+              linkLabel={`View ${project.title} on GitHub`}
+              isDark={isDark}
+              icon={githubIcon}
+            />
+          ))}
+        </Fade>
       </div>
     </div>
   );

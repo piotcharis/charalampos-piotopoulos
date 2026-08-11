@@ -1,10 +1,150 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import Postman from "./resources/postman-icon.svg";
 import PostmanCert from "./resources/postman-cert.png";
 import PMCert from "./resources/pm-cert.png";
 import "../../App.css";
+
+const skills = [
+  {
+    id: "java",
+    label: "Java",
+    href: "https://www.java.com/en/",
+    src: "https://user-images.githubusercontent.com/79626497/189351129-c95e19fc-68c8-480c-8b9b-76091299ed45.png",
+  },
+  {
+    id: "c",
+    label: "C",
+    href: "https://www.cprogramming.com/",
+    src: "https://user-images.githubusercontent.com/79626497/189351660-35d2acec-dade-4ea4-802b-750843c30f11.png",
+  },
+  {
+    id: "cpp",
+    label: "C++",
+    href: "https://cplusplus.com/",
+    src: "https://www.vectorlogo.zone/logos/isocpp/isocpp-icon.svg",
+  },
+  {
+    id: "python",
+    label: "Python",
+    href: "https://www.python.org/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
+    id: "php",
+    label: "PHP",
+    href: "https://www.php.net/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  },
+  {
+    id: "pytorch",
+    label: "Pytorch",
+    href: "https://pytorch.org/",
+    src: "https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg",
+    size: { width: 140, widthSmall: 100 },
+  },
+  {
+    id: "assembly",
+    label: "Assembly",
+    href: "https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html/",
+    src: "https://user-images.githubusercontent.com/79626497/189353214-f5308df0-abb6-4ccf-8643-ba8cfbc05b9c.png",
+    size: { width: 90, widthSmall: 70 },
+  },
+  {
+    id: "ocaml",
+    label: "Ocaml",
+    href: "https://ocaml.org/",
+    src: "https://user-images.githubusercontent.com/79626497/189353441-10a738f5-917b-4584-aa73-24521208351d.png",
+  },
+  {
+    id: "react",
+    label: "React",
+    href: "https://reactjs.org/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    id: "js",
+    label: "JavaScript",
+    href: "https://www.javascript.com/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    id: "node",
+    label: "Node.js",
+    href: "https://nodejs.org/en",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg",
+  },
+  {
+    id: "html",
+    label: "HTML",
+    href: "https://html.com/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    id: "mysql",
+    label: "MySQL",
+    href: "https://www.mysql.com/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    id: "latex",
+    label: "LaTeX",
+    href: "https://www.latex-project.org/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg",
+  },
+  {
+    id: "markdown",
+    label: "Markdown",
+    href: "https://www.markdownguide.org/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg",
+  },
+  {
+    id: "docker",
+    label: "Docker",
+    href: "https://www.docker.com/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    id: "git",
+    label: "Git",
+    href: "https://git-scm.com/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    id: "gradle",
+    label: "Gradle",
+    href: "https://gradle.org/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg",
+  },
+  {
+    id: "spring",
+    label: "Spring",
+    href: "https://spring.io/",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+  },
+  {
+    id: "postman",
+    label: "Postman",
+    href: "https://www.postman.com/",
+    src: Postman,
+  },
+  {
+    id: "postman-cert",
+    label: "Postman Student Expert Certification",
+    href: "https://api.badgr.io/public/assertions/qXe_zpw9TxWoI-mZI9qXsw",
+    src: PostmanCert,
+    alt: "Postman Certification",
+  },
+  {
+    id: "pm-cert",
+    label: "Google Project Manager Professional Certificate",
+    href: "https://www.coursera.org/account/accomplishments/specialization/VVQ12UZCE1KX",
+    src: PMCert,
+    alt: "Google PM Certification",
+  },
+];
 
 const LanguagesAndTools = () => {
   const [isLarge, setIsLarge] = useState(window.innerWidth > 1500);
@@ -15,339 +155,42 @@ const LanguagesAndTools = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const currentStyle = {
-    width: isLarge ? 80 : 60,
-    height: isLarge ? 85 : 65,
-    padding: 10,
-    cursor: "pointer",
-  };
-
   return (
     <div className="mainStyle">
       <h1 className="title">Languages and Tools</h1>
-      <p>
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="java">Java</Tooltip>}
-        >
-          <a href="https://www.java.com/en/">
-            <img
-              src="https://user-images.githubusercontent.com/79626497/189351129-c95e19fc-68c8-480c-8b9b-76091299ed45.png"
-              alt="Java"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
+      <div className="skills-grid">
+        <Fade cascade damping={0.02} direction="up" triggerOnce>
+          {skills.map((skill) => {
+            const width = isLarge
+              ? (skill.size?.width ?? 80)
+              : (skill.size?.widthSmall ?? 60);
+            const style = {
+              width,
+              height: isLarge ? 85 : 65,
+              padding: 10,
+              cursor: "pointer",
+            };
 
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="c">C</Tooltip>}
-        >
-          <a href="https://www.cprogramming.com/">
-            <img
-              src="https://user-images.githubusercontent.com/79626497/189351660-35d2acec-dade-4ea4-802b-750843c30f11.png"
-              alt="C"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="c++">C++</Tooltip>}
-        >
-          <a href="https://cplusplus.com/">
-            <img
-              src="https://www.vectorlogo.zone/logos/isocpp/isocpp-icon.svg"
-              alt="C++"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="python">Python</Tooltip>}
-        >
-          <a href="https://www.python.org/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-              alt="Python"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="php">PHP</Tooltip>}
-        >
-          <a href="https://www.php.net/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-              alt="PHP"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="pytorch">Pytorch</Tooltip>}
-        >
-          <a href="https://pytorch.org/">
-            <img
-              src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg"
-              alt="Pytorch"
-              style={{
-                width: isLarge ? 140 : 100,
-                height: isLarge ? 85 : 65,
-                padding: 10,
-                cursor: "pointer",
-              }}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="assembly">Assembly</Tooltip>}
-        >
-          <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html/">
-            <img
-              src="https://user-images.githubusercontent.com/79626497/189353214-f5308df0-abb6-4ccf-8643-ba8cfbc05b9c.png"
-              alt="Assembly"
-              style={{
-                width: isLarge ? 90 : 70,
-                height: isLarge ? 85 : 65,
-                padding: 10,
-                cursor: "pointer",
-              }}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="ocaml">Ocaml</Tooltip>}
-        >
-          <a href="https://ocaml.org/">
-            <img
-              src="https://user-images.githubusercontent.com/79626497/189353441-10a738f5-917b-4584-aa73-24521208351d.png"
-              alt="Ocaml"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="react">React</Tooltip>}
-        >
-          <a href="https://reactjs.org/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-              alt="React"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="js">JavaScript</Tooltip>}
-        >
-          <a href="https://www.javascript.com/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              alt="JavaScript"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="node">Node.js</Tooltip>}
-        >
-          <a href="https://nodejs.org/en">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg"
-              alt="Node.js"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="html">HTML</Tooltip>}
-        >
-          <a href="https://html.com/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-              alt="HTML"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="html">MySQL</Tooltip>}
-        >
-          <a href="https://www.mysql.com/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-              alt="MySQL"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="latex">LaTeX</Tooltip>}
-        >
-          <a href="https://www.latex-project.org/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg"
-              alt="LaTeX"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="markdown">Markdown</Tooltip>}
-        >
-          <a href="https://www.markdownguide.org/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
-              alt="Markdown"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="docker">Docker</Tooltip>}
-        >
-          <a href="https://www.docker.com/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-              alt="Docker"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="git">Git</Tooltip>}
-        >
-          <a href="https://git-scm.com/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-              alt="Git"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="gradle">Gradle</Tooltip>}
-        >
-          <a href="https://gradle.org/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
-              alt="Gradle"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="spring">Spring</Tooltip>}
-        >
-          <a href="https://spring.io/">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-              alt="Spring"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={<Tooltip id="postman">Postman</Tooltip>}
-        >
-          <a href="https://www.postman.com/">
-            <img src={Postman} alt="Postman" style={currentStyle} />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={
-            <Tooltip id="postman-cert">
-              Postman Student Expert Certification
-            </Tooltip>
-          }
-        >
-          <a href="https://api.badgr.io/public/assertions/qXe_zpw9TxWoI-mZI9qXsw">
-            <img
-              src={PostmanCert}
-              alt="Postman Certification"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={
-            <Tooltip id="postman-cert">
-              Google Project Manager Professional Certificate
-            </Tooltip>
-          }
-        >
-          <a href="https://www.coursera.org/account/accomplishments/specialization/VVQ12UZCE1KX">
-            <img
-              src={PMCert}
-              alt="Google PM Certification"
-              style={currentStyle}
-            />
-          </a>
-        </OverlayTrigger>
-      </p>
+            return (
+              <OverlayTrigger
+                key={skill.id}
+                placement="right"
+                delay={{ show: 250, hide: 400 }}
+                overlay={<Tooltip id={skill.id}>{skill.label}</Tooltip>}
+              >
+                <a href={skill.href} target="_blank" rel="noreferrer">
+                  <img
+                    src={skill.src}
+                    alt={skill.alt ?? skill.label}
+                    style={style}
+                    loading="lazy"
+                  />
+                </a>
+              </OverlayTrigger>
+            );
+          })}
+        </Fade>
+      </div>
     </div>
   );
 };

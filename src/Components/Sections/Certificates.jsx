@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import { Fade } from "react-awesome-reveal";
 import Card from "../Card";
 import pmCertImg from "./resources/pm-cert-pdf.jpg";
 import cs50Img from "./resources/CS50.jpg";
@@ -56,18 +56,20 @@ function Certificates({ isDark }) {
     <div className="divProjects">
       <h1 className="title">Certificates</h1>
       <div className="projects-grid">
-        {certificates.map((certificate) => (
-          <Card
-            key={certificate.link}
-            title={certificate.title}
-            description={certificate.description}
-            image={certificate.image}
-            link={certificate.link}
-            linkLabel={`View ${certificate.title}`}
-            isDark={isDark}
-            icon={checkIcon}
-          />
-        ))}
+        <Fade cascade damping={0.1} direction="up" triggerOnce>
+          {certificates.map((certificate) => (
+            <Card
+              key={certificate.link}
+              title={certificate.title}
+              description={certificate.description}
+              image={certificate.image}
+              link={certificate.link}
+              linkLabel={`View ${certificate.title}`}
+              isDark={isDark}
+              icon={checkIcon}
+            />
+          ))}
+        </Fade>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Arrow from "./resources/arrow-up.png";
 import Arrow_Orange from "./resources/arrow-up-orange.png";
 import "../../App.css";
