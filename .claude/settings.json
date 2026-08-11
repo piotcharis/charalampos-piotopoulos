@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"C:/Users/piotc/AppData/Local/Temp/claude/c--Users-piotc-charalampos-piotopoulos-6/b10b082b-d306-4ec0-afdf-e6592121b04f/scratchpad/website-light-shot.mjs\" \"C:/Users/piotc/AppData/Local/npm-cache/_npx/e41f203b7505f1fb/website-light-shot.mjs\")",
+      "Bash(node website-light-shot.mjs)",
+      "Bash(cp website-light-new.png \"C:/Users/piotc/AppData/Local/Temp/claude/c--Users-piotc-charalampos-piotopoulos-6/b10b082b-d306-4ec0-afdf-e6592121b04f/scratchpad/\")",
+      "Bash(node -e ' *)"
+    ]
+  }
+}
