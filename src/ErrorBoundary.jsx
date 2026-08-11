@@ -9,7 +9,7 @@ class ErrorBoundary extends React.Component {
   // This lifecycle method is called after an error has been thrown by a descendant component.
   static getDerivedStateFromError(error) {
     // Update state so the next render will show the fallback UI.
-    return { hasError: true };
+    return { hasError: true, error };
   }
 
   // This lifecycle method is called after an error has been thrown by a descendant component.

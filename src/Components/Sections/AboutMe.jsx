@@ -5,10 +5,10 @@ import astronautImg from "./resources/astronaut-standing.png";
 import "../../App.css";
 
 function getAge() {
-  let today = new Date();
-  let birthDate = new Date("2000-05-15");
-  let age = today.getFullYear() - 2000;
-  let m = today.getMonth() - 5;
+  const today = new Date();
+  const birthDate = new Date(2000, 4, 15); // May 15, 2000
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
 
   if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
     age--;

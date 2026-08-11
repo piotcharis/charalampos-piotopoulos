@@ -41,7 +41,7 @@ const Contact = () => {
         <input
           type="hidden"
           name="_next"
-          value="http://charalampos-piotopoulos.com/thanks.html"
+          value="https://charalampos-piotopoulos.com/thanks.html"
         />
 
         <textarea

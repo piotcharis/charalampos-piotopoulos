@@ -27,9 +27,10 @@ function App() {
       <TopButton />
 
       <div className="darkSwitch">
-        <div onClick={() => setIsDark((current) => !current)}>
-          <ModeButton />
-        </div>
+        <ModeButton
+          isDark={isDark}
+          onToggle={() => setIsDark((current) => !current)}
+        />
       </div>
 
       <div>
