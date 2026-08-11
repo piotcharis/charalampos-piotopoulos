@@ -1,6 +1,8 @@
+import { useRef } from "react";
 import PropTypes from "prop-types";
 import { Fade } from "react-awesome-reveal";
 import Card from "../Card";
+import { useEqualCardHeight } from "../../hooks/useEqualCardHeight";
 import pmCertImg from "./resources/pm-cert-pdf.jpg";
 import cs50Img from "./resources/CS50.jpg";
 import learnCImg from "./resources/learn_c.png";
@@ -52,11 +54,14 @@ const checkIcon = (
 );
 
 function Certificates({ isDark }) {
+  const gridRef = useRef(null);
+  useEqualCardHeight(gridRef, [isDark]);
+
   return (
     <div className="divProjects">
       <h1 className="title">Certificates</h1>
-      <div className="projects-grid">
-        <Fade cascade damping={0.1} direction="up" triggerOnce>
+      <Fade direction="up" triggerOnce>
+        <div className="projects-grid" ref={gridRef}>
           {certificates.map((certificate) => (
             <Card
               key={certificate.link}
@@ -69,8 +74,8 @@ function Certificates({ isDark }) {
               icon={checkIcon}
             />
           ))}
-        </Fade>
-      </div>
+        </div>
+      </Fade>
     </div>
   );
 }

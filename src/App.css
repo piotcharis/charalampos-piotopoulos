@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --color-bg-light: #ffffff;
   --color-bg-dark: #232c33;
@@ -66,6 +72,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
   max-width: 1100px;
 }
 
@@ -277,9 +284,30 @@
   margin-bottom: 10px;
 }
 
-.project-card__technologies {
-  font-size: 14px;
-  margin-bottom: 10px;
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.tech-pill {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background-color: rgba(211, 97, 53, 0.12);
+  color: var(--color-accent);
+  border: 1px solid rgba(211, 97, 53, 0.3);
+}
+
+.project-card--dark .tech-pill {
+  background-color: rgba(211, 97, 53, 0.18);
+  border-color: rgba(211, 97, 53, 0.4);
 }
 
 .project-card__links {
@@ -290,13 +318,20 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  width: 100%;
   max-width: 1200px;
   grid-auto-rows: minmax(200px, auto);
   grid-gap: 30px;
   padding: 0 30px;
   margin: 0 auto;
   justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    padding: 0 16px;
+  }
 }
 
 .timeline-container {

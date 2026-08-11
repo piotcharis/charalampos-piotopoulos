@@ -1,11 +1,18 @@
 import PropTypes from "prop-types";
 import "../App.css";
 
-function Card({ title, description, image, link, linkLabel, isDark, icon }) {
+function Card({
+  title,
+  description,
+  image,
+  link,
+  linkLabel,
+  isDark,
+  icon,
+  techStack,
+}) {
   return (
-    <div
-      className={`project-card${isDark ? " project-card--dark" : ""}`}
-    >
+    <div className={`project-card${isDark ? " project-card--dark" : ""}`}>
       <img
         src={image}
         alt={title}
@@ -14,6 +21,15 @@ function Card({ title, description, image, link, linkLabel, isDark, icon }) {
       />
       <h3 className="project-card__title">{title}</h3>
       <p className="project-card__description">{description}</p>
+      {techStack && techStack.length > 0 && (
+        <ul className="project-card__tech">
+          {techStack.map((tech) => (
+            <li key={tech} className="tech-pill">
+              {tech}
+            </li>
+          ))}
+        </ul>
+      )}
       <div className="project-card__links">
         <a
           href={link}
@@ -42,6 +58,7 @@ Card.propTypes = {
   linkLabel: PropTypes.string.isRequired,
   isDark: PropTypes.bool,
   icon: PropTypes.node.isRequired,
+  techStack: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Card;

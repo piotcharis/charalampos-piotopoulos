@@ -35,7 +35,8 @@ const AboutMe = () => {
             <p>
               My name is Charalampos Piotopoulos, I am {getAge()} years old,
               from Greece and I study MSc. Computer Science at the Technical
-              University of Munich (TUM).{" "}
+              University of Munich (TUM) and work as a Full-Stack Software
+              Engineer at Koinon (TUM).
             </p>
             <p>
               I am always trying to evolve and learn new things by working hard

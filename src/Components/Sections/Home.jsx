@@ -8,12 +8,20 @@ import HeroBackground from "./HeroBackground";
 import "../../App.css";
 
 const linkStyle = {
-  display: "inline-block",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
   border: "transparent",
   background: "transparent",
   width: 60,
   margin: "0 5px",
   cursor: "pointer",
+};
+
+const iconStyle = {
+  width: 40,
+  height: 40,
+  objectFit: "contain",
 };
 
 const Home = (props) => {
@@ -54,6 +62,7 @@ const Home = (props) => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
               alt="LinkedIn"
+              style={iconStyle}
             />
           </a>
         </OverlayTrigger>
@@ -72,6 +81,7 @@ const Home = (props) => {
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
               alt="GitHub"
+              style={iconStyle}
             />
           </a>
         </OverlayTrigger>
@@ -91,7 +101,7 @@ const Home = (props) => {
             <img
               src="https://img.icons8.com/dotty/80/null/resume.png"
               alt="CV"
-              style={{ width: "60px" }}
+              style={iconStyle}
             />
           </a>
         </OverlayTrigger>

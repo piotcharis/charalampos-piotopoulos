@@ -13,7 +13,7 @@ function Experience(props) {
             <Event
               interval={"2025 - present"}
               title={"Koinon / TU Munich"}
-              subtitle={"Software Engineer - Part-time"}
+              subtitle={"Full-Stack Software Engineer - Part-time"}
             >
               <div
                 style={{
