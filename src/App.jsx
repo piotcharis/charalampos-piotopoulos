@@ -28,7 +28,7 @@ function App() {
     <div id="home" style={style}>
       <TopButton />
 
-      <div className="darkSwitch">
+      <div className={`darkSwitch${isDark ? " darkSwitch--dark" : ""}`}>
         <ModeButton
           isDark={isDark}
           onToggle={() => setIsDark((current) => !current)}
@@ -36,7 +36,7 @@ function App() {
       </div>
 
       <div>
-        <NavBar id="top" />
+        <NavBar id="top" isDark={isDark} />
       </div>
 
       <div

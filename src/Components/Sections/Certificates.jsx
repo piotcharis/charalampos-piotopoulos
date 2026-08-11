@@ -60,7 +60,7 @@ function Certificates({ isDark }) {
   return (
     <div className="divProjects">
       <h1 className="title">Certificates</h1>
-      <Fade direction="up" triggerOnce>
+      <Fade direction="up" triggerOnce style={{ width: "100%" }}>
         <div className="projects-grid" ref={gridRef}>
           {certificates.map((certificate) => (
             <Card

@@ -23,7 +23,7 @@ const projects = [
     techStack: ["React", "HTML", "CSS"],
   },
   {
-    title: "Bachelor Thesis",
+    title: "Bachelor Thesis - phase optimized iOCT visualization",
     description: "This project was created using Python.",
     image: thesisImg,
     githubRepo: "https://github.com/piotcharis/Bachelor_Thesis",
@@ -95,7 +95,7 @@ function Projects({ isDark }) {
   return (
     <div className="divProjects">
       <h1 className="title">Projects</h1>
-      <Fade direction="up" triggerOnce>
+      <Fade direction="up" triggerOnce style={{ width: "100%" }}>
         <div className="projects-grid" ref={gridRef}>
           {projects.map((project) => (
             <Card

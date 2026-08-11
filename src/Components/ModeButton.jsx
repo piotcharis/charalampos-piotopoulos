@@ -4,10 +4,11 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 const ModeButton = ({ isDark, onToggle }) => {
   return (
     <DarkModeSwitch
-      style={{ marginBottom: "auto" }}
       checked={isDark}
       onChange={onToggle}
-      size={43}
+      size={26}
+      sunColor="#232c33"
+      moonColor="#f5f5f5"
     />
   );
 };
