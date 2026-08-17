@@ -20,14 +20,14 @@ const projects = [
     description: "This website was created using React.js, HTML and CSS.",
     image: websiteImg,
     githubRepo: "https://github.com/piotcharis/personal_site",
-    techStack: ["React", "HTML", "CSS"],
+    techStack: ["React", "Bootstrap", "Styled Components", "HTML", "CSS"],
   },
   {
     title: "Bachelor Thesis - phase optimized iOCT visualization",
     description: "This project was created using Python.",
     image: thesisImg,
     githubRepo: "https://github.com/piotcharis/Bachelor_Thesis",
-    techStack: ["Python"],
+    techStack: ["Python", "Jupyter Notebook"],
   },
   {
     title: "Neural Network for iOCT Image Segmentation",
@@ -35,21 +35,21 @@ const projects = [
     image: ioctImg,
     githubRepo:
       "https://github.com/piotcharis/Neural_Network_iOCT_Image_Segmentation",
-    techStack: ["Python"],
+    techStack: ["Python", "PyTorch", "Flask", "Jupyter Notebook"],
   },
   {
     title: "Zero-Trust Document Vault",
     description: "This project was created using Java (Spring Boot).",
     image: vaultImg,
     githubRepo: "https://github.com/piotcharis/secure-file-vault",
-    techStack: ["Java", "Spring Boot"],
+    techStack: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
   },
   {
     title: "Custom Questionnaire",
     description: "This project was created using PHP and Javascript.",
     image: questImg,
     githubRepo: "https://github.com/piotcharis/Questionnaire",
-    techStack: ["PHP", "JavaScript"],
+    techStack: ["React", "PHP", "MySQL"],
   },
   {
     title: "Mandelbrot set",
