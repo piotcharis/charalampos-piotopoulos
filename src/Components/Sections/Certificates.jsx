@@ -4,6 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import Card from "../Card";
 import { useEqualCardHeight } from "../../hooks/useEqualCardHeight";
 import pmCertImg from "./resources/pm-cert-pdf.jpg";
+import csCertImg from "./resources/cs-cert-pdf.jpg";
 import cs50Img from "./resources/CS50.jpg";
 import learnCImg from "./resources/learn_c.png";
 import learnPythonImg from "./resources/learn_python.png";
@@ -13,9 +14,16 @@ const certificates = [
   {
     title: "Google Project Manager Professional Certificate",
     description:
-      "Those who earn the Google Project Management Certificate have completed seven courses, developed by Google, that include handson, practice-based assessments and are designed to prepare them for introductory-level roles in Project Management. They are competent in initiating, planning and running both traditional and agile projects.",
+      "A comprehensive certification focusing on the core methodologies of project planning, execution, and Agile development. This program provided practical experience in structuring project workflows, managing stakeholders, and applying Scrum frameworks. Earning this credential strengthens one's ability to guide complex software engineering projects from concept to deployment, ensuring effective team alignment and the timely delivery of technical solutions.",
     image: pmCertImg,
     link: "https://www.coursera.org/account/accomplishments/specialization/VVQ12UZCE1KX",
+  },
+  {
+    title: "Google Cybersecurity Professional Certificate",
+    description:
+      "A comprehensive certification focusing on the foundational principles of threat intelligence, risk management, and network defense. This program provided hands-on experience with Python, Linux, and SIEM tools to actively monitor and secure systems. Earning this credential strengthens one's ability to architect robust, secure applications and ensure strict compliance with sensitive data protection and industry regulations.",
+    image: csCertImg,
+    link: "https://www.coursera.org/account/accomplishments/specialization/FODGT88N64QU",
   },
   {
     title: "Harvard CS50 Certificate",
