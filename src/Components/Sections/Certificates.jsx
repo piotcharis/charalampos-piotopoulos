@@ -5,6 +5,7 @@ import Card from "../Card";
 import { useEqualCardHeight } from "../../hooks/useEqualCardHeight";
 import pmCertImg from "./resources/pm-cert-pdf.jpg";
 import csCertImg from "./resources/cs-cert-pdf.jpg";
+import msCertImg from "./resources/ms-cert-pdf.jpg";
 import cs50Img from "./resources/CS50.jpg";
 import learnCImg from "./resources/learn_c.png";
 import learnPythonImg from "./resources/learn_python.png";
@@ -24,6 +25,13 @@ const certificates = [
       "A comprehensive certification focusing on the foundational principles of threat intelligence, risk management, and network defense. This program provided hands-on experience with Python, Linux, and SIEM tools to actively monitor and secure systems. Earning this credential strengthens one's ability to architect robust, secure applications and ensure strict compliance with sensitive data protection and industry regulations.",
     image: csCertImg,
     link: "https://www.coursera.org/account/accomplishments/specialization/FODGT88N64QU",
+  },
+  {
+    title: "Yale Introduction to Medical Software Certificate",
+    description:
+      "Acquired knowledge in medical device regulations, software development lifecycles, and risk management, and was prepared to design, develop, and validate compliant software solutions for the healthcare industry.",
+    image: msCertImg,
+    link: "https://www.coursera.org/account/accomplishments/verify/11CN793PMI5A",
   },
   {
     title: "Harvard CS50 Certificate",
