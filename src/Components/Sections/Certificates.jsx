@@ -7,6 +7,8 @@ import pmCertImg from "./resources/pm-cert-pdf.jpg";
 import csCertImg from "./resources/cs-cert-pdf.jpg";
 import msCertImg from "./resources/ms-cert-pdf.jpg";
 import cs50Img from "./resources/CS50.jpg";
+import appreciationCertImg from "./resources/certificate-appreciation-koinon.png";
+import appreciationCertPdf from "./resources/certificate-appreciation-koinon.pdf";
 import learnCImg from "./resources/learn_c.png";
 import learnPythonImg from "./resources/learn_python.png";
 import "../../App.css";
@@ -39,6 +41,13 @@ const certificates = [
       "CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming",
     image: cs50Img,
     link: "https://cs50.harvard.edu/certificates/d2d30217-c980-494d-a151-02141b317b04",
+  },
+  {
+    title: "Certificate of Appreciation - Koinon",
+    description:
+      "Awarded in recognition of outstanding performance as a Software Engineer (Werkstudent) at Koinon, demonstrating exceptional dedication, technical proficiency, and a commitment to excellence.",
+    image: appreciationCertImg,
+    link: appreciationCertPdf,
   },
   {
     title: "Codecademy Learn C Certificate",
